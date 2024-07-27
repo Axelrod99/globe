@@ -1,0 +1,30 @@
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" height="100%" viewBox="0 0 393 517"  preserveAspectRatio="none" enable-background="new 0 0 393 517" xml:space="preserve">
+
+
+<rect x="4.225" fill="#1F4415" width="385.658" height="516.726"/>
+<rect x="4.225" y="506.51" fill="#160C03" width="385.658" height="10.49"/>
+<rect x="12.669" y="11.11" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="233.497" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="159.368" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="85.239" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="307.626" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="381.755" fill="#1F4C10" width="368.768" height="40.349"/>
+<rect x="12.669" y="455.884" fill="#1F4C10" width="368.768" height="40.349"/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="21.115,505.65 21.115,21.282 
+	372.993,21.282 372.993,505.65 "/>
+<g>
+	
+		<rect x="104.407" y="21.282" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" width="185.292" height="80.36"/>
+	
+		<rect x="151.413" y="21.282" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" width="91.282" height="26.404"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M237.385,101.66
+		c0,14.77-17.143,26.743-38.289,26.743c-21.147,0-38.291-11.973-38.291-26.743"/>
+</g>
+<g>
+	<circle fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" cx="197.054" cy="345.394" r="60.522"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="22.522" y1="345.395" x2="371.585" y2="345.395"/>
+</g>
+<circle fill="#FFFFFF" cx="196.875" cy="68.625" r="2.625"/>
+</svg>
