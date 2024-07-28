@@ -32,10 +32,15 @@ export const leagueNav = [
   { name: "STATS" },
 ];
 
+export const historyNav = [
+  { name: "OVERVIEW" },
+  { name: "HISTORY" },
+];
+
 export const tableNav = [
   { name: "NORMAL" },
   { name: "FULL" },
-  { name: "FORM" }
+  { name: "FORM" },
 ];
 
 export const statsNav = [
@@ -45,29 +50,29 @@ export const statsNav = [
   { name: "MOTM" },
   { name: "YEL CARDS" },
   { name: "RED CARDS" },
-
 ];
 
-export const globeCupNav = [
-  { name: "RESULTS" },
+export const globeCupNav = [{ name: "RESULTS" }, { name: "STATS" }];
+
+export const historyTableNav = [
+  { name: "HONOURS" },
+  { name: "BEST MANAGER" },
+  { name: "TABLE" },
   { name: "STATS" },
+  { name: "RECORD SIGNS" },
+
 ];
 
-export const communityChampion = [
-  { name: "RESULTS" },
-];
+export const communityChampion = [{ name: "RESULTS" }];
 
 export const Defenders = [
   { name: "Elliot" },
   { name: "Makinso" },
   { name: "Ted" },
-  { name: "Billy" }
+  { name: "Billy" },
 ];
 
-export const Midfielders = [
-  { name: "Johson" },
-  { name: "Pedro" },
-];
+export const Midfielders = [{ name: "Johson" }, { name: "Pedro" }];
 
 export const Attackers = [
   { name: "Peter" },
@@ -75,25 +80,23 @@ export const Attackers = [
   { name: "Victor" },
 ];
 
-export const Forwarder = [
-  { name: "Mark" }
-];
+export const Forwarder = [{ name: "Mark" }];
 
 export const TransferOption = [
   { name: "Player Search" },
   { name: "My TransferList" },
   { name: "All Transfer" },
   { name: "Loan List" },
-  { name: "Concern List" }
-]
+  { name: "Concern List" },
+];
 
 export const CompetitionOption = [
   { name: "League" },
   { name: "Clobe Cup" },
   { name: "Globe Shield" },
   { name: "European Cup" },
-  { name: "Community Champion" }
-]
+  { name: "Community Champion" },
+];
 
 export const Premier_League = [
   { name: "Arsenal" },

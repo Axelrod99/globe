@@ -85,12 +85,12 @@ const LeagueTab = () => {
               ))}
             </div>
 
-            {statsTab === statsNav[0].name && <GoalsTable/>}
-            {statsTab === statsNav[1].name && <AssistTable/>}
-            {statsTab === statsNav[2].name && <RatingTable/>}
-            {statsTab === statsNav[3].name && <MotmTable/>}
-            {statsTab === statsNav[4].name && <YellowCardTable/>}
-            {statsTab === statsNav[5].name && <RedCardTable/>}
+            {statsTab === statsNav[0].name && <GoalsTable />}
+            {statsTab === statsNav[1].name && <AssistTable />}
+            {statsTab === statsNav[2].name && <RatingTable />}
+            {statsTab === statsNav[3].name && <MotmTable />}
+            {statsTab === statsNav[4].name && <YellowCardTable />}
+            {statsTab === statsNav[5].name && <RedCardTable />}
           </>
         )}
       </div>

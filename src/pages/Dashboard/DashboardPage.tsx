@@ -7,6 +7,7 @@ import ManagementPage from "./DashboardComponents/ManagementPage";
 import TransferPage from "./DashboardComponents/TransferPage";
 import LoanList from "./DashboardComponents/TransferPageTabs/loanList/loanList";
 import CompetitionPage from "./DashboardComponents/competitionPage";
+import HistoryPage from "./DashboardComponents/HistoryPage";
 
 const DashboardPage = () => {
   const [activeTab, setActiveTab] = useState(DashboardNav[0].name);
@@ -60,7 +61,7 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-row-reverse items-center justify-between w-full">
+          <div className="flex flex-row-reverse lg:flex-row items-center justify-between w-full">
             <div className="hidden sm:flex">
               <button className="border shadow px-6 py-1 rounded-[8px]">
                 Invite{" "}
@@ -104,6 +105,7 @@ const DashboardPage = () => {
         {activeTab === DashboardNav[2].name && <ManagementPage />}
         {activeTab === DashboardNav[3].name && <TransferPage />}
         {activeTab === DashboardNav[4].name && <CompetitionPage />}
+        {activeTab === DashboardNav[5].name && <HistoryPage />}
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const CommunityChampionResult = () => {
           <td className="px-1 w-full" />
         </thead>
 
-        {items.map((item) => (
+        {/* {items.map((item) => ( */}
           <tr className="bg-white hover:bg-[#EEEEEE] font-semibold border-b border-[#bbbbbb76] h-[40px] py-4">
             <td className="  ">
               <div className="flex justify-center items-center py-2 gap-14 font-normal">
@@ -56,7 +56,7 @@ const CommunityChampionResult = () => {
               </div>
             </td>
           </tr>
-        ))}
+        {/* ))} */}
       </table>
     </div>
   );
