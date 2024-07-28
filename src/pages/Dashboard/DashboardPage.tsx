@@ -27,7 +27,9 @@ const DashboardPage = () => {
             {DashboardNav.map((items) => (
               <div
                 onClick={() => setActiveTab(items.name)}
-                className="cursor-pointer hover:font-black flex items-center justify-center border rounded-l-[5px]"
+                className={`cursor-pointer ${
+                  activeTab === items.name ? "text-gray-400" : "text-white"
+                } hover:font-black flex items-center justify-center border rounded-l-[5px]`}
               >
                 {items.name}
               </div>

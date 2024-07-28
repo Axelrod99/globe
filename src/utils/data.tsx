@@ -38,6 +38,25 @@ export const tableNav = [
   { name: "FORM" }
 ];
 
+export const statsNav = [
+  { name: "GOALS" },
+  { name: "ASSISTS" },
+  { name: "RATING" },
+  { name: "MOTM" },
+  { name: "YEL CARDS" },
+  { name: "RED CARDS" },
+
+];
+
+export const globeCupNav = [
+  { name: "RESULTS" },
+  { name: "STATS" },
+];
+
+export const communityChampion = [
+  { name: "RESULTS" },
+];
+
 export const Defenders = [
   { name: "Elliot" },
   { name: "Makinso" },
@@ -75,3 +94,26 @@ export const CompetitionOption = [
   { name: "European Cup" },
   { name: "Community Champion" }
 ]
+
+export const Premier_League = [
+  { name: "Arsenal" },
+  { name: "Aston Villa" },
+  { name: "Bournemouth" },
+  { name: "Brentford" },
+  { name: "Brighton" },
+  { name: "Chelsea" },
+  { name: "Crystal Palace" },
+  { name: "Everton" },
+  { name: "Fulham" },
+  { name: "Ipswich Town" },
+  { name: "Leicester City" },
+  { name: "Liverpool" },
+  { name: "Manchester City" },
+  { name: "Manchester United" },
+  { name: "Newcastle" },
+  { name: "Nottm Forest" },
+  { name: "Southampton" },
+  { name: "Tottenham" },
+  { name: "West Ham" },
+  { name: "Wolves" },
+];

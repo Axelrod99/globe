@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { CompetitionOption, TransferOption } from "../../../utils/data";
 import sortImage from "../../../assets/icons/icons8-sort-down-30.png";
-import LeagueTab from "./CompetitionPageTabs/leagueTab";
+import LeagueTab from "./CompetitionPageTabs/League/leagueTab";
+import GlobeCupTab from "./CompetitionPageTabs/GlobeCup/globeCupTab";
+import GlobeShieldTab from "./CompetitionPageTabs/GlobeShield/globeShieldTab";
+import CommunityChampionTab from "./CompetitionPageTabs/CommunityChampion/communityChampionTab";
 
 const CompetitionPage = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -45,7 +48,19 @@ const CompetitionPage = () => {
 
           <div className="w-full overflow-x-scroll">
             <div className="">
-                {activeTab === CompetitionOption[0].name && <LeagueTab/>}
+              {activeTab === CompetitionOption[0].name && <LeagueTab />}
+              {activeTab === CompetitionOption[1].name && <GlobeCupTab />}
+              {activeTab === CompetitionOption[2].name && <GlobeShieldTab />}
+              {activeTab === CompetitionOption[3].name && (
+                <div className="flex flex-col mt-6 w-full">
+                  <div className="w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white h-[220px]">
+                    Coming Soon...
+                  </div>
+                </div>
+              )}
+              {activeTab === CompetitionOption[4].name && (
+                <CommunityChampionTab />
+              )}
             </div>
           </div>
         </div>
