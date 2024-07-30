@@ -1,11 +1,12 @@
 import React from "react";
 import { items } from "../../../utils/data";
+import comment from "../../../assets/icons/icons8-comment-50.png";
 
 const DashPage = () => {
   return (
     <div>
       <div className="flex justify-center mt-4">
-        <div className="grid gap-4 sm:gap-2 sm:grid-cols-3 w-[90%] md:w-[75%] xl:w-[65%] gap-x-3">
+        <div className="flex xs:grid gap-4 sm:gap-2 sm:grid-cols-3 w-[95%] md:w-[75%] xl:w-[65%] gap-x-3">
           <div className="w-full shadow border bg-[#e9e9e9cd] hover:bg-[#ffffff] sm:p-1">
             <div className="flex justify-center text-[16px] sm:text-[18px] font-bold">
               <p className="p-2">LAST FIXTURE</p>
@@ -86,10 +87,10 @@ const DashPage = () => {
       </div>
 
       <div className="flex justify-center mt-5 pb-10">
-        <div className="w-[90%] shadow bg-[#e9e9e9cd] p-1 rounded-[4px]">
+        <div className="w-[95%] md:w-[90%] shadow bg-[#e9e9e9cd] p-1 rounded-[4px]">
           <div className="w-full flex flex-col items-center bg-[#ffffffb9] rounded-[4px]">
             <div className="w-[95%] sm:w-[85%] xl:w-[75%] pb-10">
-              <div className="flex gap-1 justify-center pt-10 w-full">
+              <div className="flex flex-col items-end sm:flex-row gap-1 justify-center pt-10 w-full">
                 <textarea
                   name=""
                   className="nonResizableTextarea bg-[#ffffff92] w-full border-2 rounded-[8px] h-[90px] p-1 text-sm shadow"
@@ -106,22 +107,28 @@ const DashPage = () => {
                 {items.map((item) => (
                   <div className="w-full bg-white p-2 px-2 shadow-md rounded-[4px]">
                     <div className="flex justify-end w-full">x</div>
-                    <div className="flex gap-5">
-                      <div>
-                        <div className="w-[45px] h-[45px] shadow rounded-[35px] bg-blue-100" />
+                    <div className="flex gap-3 xs:gap-5">
+                      <div className="">
+                        {/* <div className="w-[45px] h-[45px] shadow rounded-[35px] bg-blue-100" /> */}
+                        <img
+                          className="rounded-[40px] h-[50px] max-w-[250px] xs:max-w-[220px] sm:max-w-[160px] lg:max-w-[120px]"
+                          src={
+                            "//smimgs.com/images/assets/no-player-picture.png"
+                          }
+                          alt=""
+                        />
                       </div>
                       <div>
-                        <p className="text-[14px]">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Repellendus, cumque, fuga illo magnam autem quo
-                          quas at eveniet, doloremque consequatur voluptates
-                          expedita! Nulla recusandae earum reprehenderit fuga
-                          laboriosam expedita odit?
+                        <p className="w-[95%] text-[14px]">
+                          Álvaro MORATA has completed his move to Tottenham
+                          Hotspur (Erik Ten Hag) from Manchester United (Nọnso)
+                          for 8,147,000.
                         </p>
                       </div>
-
-                      <div>dd</div>
                     </div>
+                    <div className="flex justify-end">
+                        <img className="h-6" src={comment} alt="/" />
+                      </div>
                   </div>
                 ))}
               </div>

@@ -16,7 +16,7 @@ const CompetitionPage = () => {
 
   return (
     <div className="flex justify-center pb-[30px]">
-      <div className="flex flex-col gap-[10px] items-center mt-4 w-[90%]">
+      <div className="flex flex-col gap-[10px] items-center mt-4 w-[95%] md:w-[90%]">
         <div className="flex flex-col items-start w-full">
           <div className="relative">
             <button

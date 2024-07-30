@@ -88,6 +88,7 @@ export const TransferOption = [
   { name: "All Transfer" },
   { name: "Loan List" },
   { name: "Concern List" },
+  { name: "History" },
 ];
 
 export const CompetitionOption = [

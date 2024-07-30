@@ -3,8 +3,8 @@ import React from "react";
 const PlayerSearch = () => {
   return (
     <div className="flex flex-col mt-6 w-full">
-      <div className="w-[900px] lg:w-full flex gap-2">
-        <div className="w-[65%] flex flex-col gap-3">
+      <div className="w-full xs:w-[900px] lg:w-full flex gap-2">
+        <div className="w-[65%] hidden xs:flex flex-col gap-3">
           <div className="h-[70px] w-full bg-white shadow flex justify-center items-center gap-1">
             <button className="border border-black text-[#666] bg-[#f0f0f0] py-1 w-[180px] rounded-[5px] font-semibold">
               Previous
@@ -18,8 +18,8 @@ const PlayerSearch = () => {
             No player searched
           </div>
         </div>
-        <div className="w-[35%] flex justify-end rounded-[4px] shadow mt-[70px] text-[12px] font-semibold">
-          <div className="w-fit rounded-[4px] bg-[#ffffffd9] shadow p-2">
+        <div className="w-full xs:w-[35%] flex justify-end rounded-[4px] shadow mt-[20px] xs:mt-[70px] text-[12px] font-semibold">
+          <div className="w-full xs:w-fit rounded-[4px] bg-[#ffffffd9] shadow p-2">
             <div>
               <p className="flex items-center gap-4 border-b py-2">
                 Player:{" "}

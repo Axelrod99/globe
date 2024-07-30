@@ -14,7 +14,7 @@ const GlobeShieldTab = () => {
 
   return (
     <div className="flex flex-col mt-6 w-full">
-      <div className="w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
+      <div className="w-full xs:w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
         <div className="flex justify-between w-full">
           <div className="w-[70%] flex font-semibold">
             {globeCupNav.map((item) => (
@@ -34,7 +34,7 @@ const GlobeShieldTab = () => {
 
         {activeTab === globeCupNav[1].name && (
           <>
-            <div className="flex font-semibold">
+            <div className="flex font-semibold text-[12px] xs:text-[16px]">
               {statsNav.map((item) => (
                 <div
                   onClick={() => setStatsTab(item.name)}

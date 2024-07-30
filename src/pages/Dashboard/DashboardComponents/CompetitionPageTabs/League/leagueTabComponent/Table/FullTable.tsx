@@ -11,7 +11,7 @@ const FullTable = () => {
               Pos
             </div>
           </td>
-          <td className="px-1">
+          <td className="px-1 hidden xs:flex">
             <div className="flex justify-start items-center rounded-[5px] h-[30px]">
               -
             </div>
@@ -61,7 +61,7 @@ const FullTable = () => {
               Pts
             </div>
           </td>
-          <td className="px-1">
+          <td className="px-1 hidden xs:flex">
             <div className="underline flex justify-start items-center rounded-[5px] h-[30px]">
               Form
             </div>
@@ -75,7 +75,7 @@ const FullTable = () => {
                 <p className="px-1">{i}</p>
               </div>
             </td>
-            <td className="  ">
+            <td className="hidden xs:flex">
               <div className="flex justify-start">
                 <p className="px-3 flex items-center gap-1">
                   <div className="w-6 h-4 bg-gray-700"></div>
@@ -127,7 +127,7 @@ const FullTable = () => {
                 <p>99</p>
               </div>
             </td>
-            <td className="  ">
+            <td className="hidden xs:flex">
               <div className="flex justify-start">
                 <p className="px-3 flex gap-1 items-center">
                   <div className="w-4 h-4 bg-gray-700"></div>

@@ -6,15 +6,15 @@ import { Premier_League } from "../../../utils/data";
 const SquadPage = () => {
   return (
     <div className="flex justify-center pb-[30px]">
-      <div className="flex flex-col gap-[10px] items-center mt-4 w-[90%]">
+      <div className="flex flex-col gap-[10px] items-center mt-4 w-[95%] md:w-[90%]">
         <div className="flex w-full gap-2 justify-start">
-          <button className="w-[130px] border shadow px-6 py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
+          <button className="w-[100px] sm:w-[130px] border shadow py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
             Filter
           </button>
-          <button className="w-[130px] border shadow px-6 py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
+          <button className="w-[100px] sm:w-[130px] border shadow py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
             Views
           </button>
-          <button className="w-[130px] border shadow px-6 py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
+          <button className="w-[100px] sm:w-[130px] border shadow py-1 rounded-[8px] bg-white  border-[#3379b79b] font-semibold text-[#337ab7] ">
             First Team
           </button>
         </div>
@@ -29,28 +29,31 @@ const SquadPage = () => {
                   </div>
                 </td>
                 <td className="px-1">
-                  <div className="flex justify-center items-center rounded-[5px] h-[30px]">
-                    Average Rating
+                  <div className="gap-1 flex justify-center items-center rounded-[5px] h-[30px]">
+                    <span className="hidden xs:flex"> Average</span> Rating
                   </div>
                 </td>
                 <td className="px-1">
-                  <div className="flex justify-center items-center rounded-[5px] h-[30px]">
+                  <div className="flex xs:hidden justify-center items-center rounded-[5px] h-[30px]">
+                    Age
+                  </div>
+                  <div className="hidden xs:flex justify-center items-center rounded-[5px] h-[30px]">
                     Average Age
                   </div>
                 </td>
-                <td className="px-1">
-                  <div className="flex justify-center items-center rounded-[5px] h-[30px]">
+                <td className="px-1 hidden xs:flex">
+                  <div className="flex gap-1 justify-center items-center rounded-[5px] h-[30px]">
                     Average Wage
                   </div>
                 </td>
                 <td className="px-1">
-                  <div className="flex justify-center items-center rounded-[5px] h-[30px]">
-                    Total Value
+                  <div className="flex gap-1 justify-center items-center rounded-[5px] h-[30px]">
+                    <span className="hidden xs:flex">Total</span> Value
                   </div>
                 </td>
                 <td className="px-1">
-                  <div className="flex justify-center items-center rounded-[5px] h-[30px]">
-                    Total Wages
+                  <div className="flex gap-1 justify-center items-center rounded-[5px] h-[30px]">
+                    <span className="hidden xs:flex">Total</span> Wages
                   </div>
                 </td>
               </thead>
@@ -71,7 +74,7 @@ const SquadPage = () => {
                     <p className="px-1">29</p>
                   </div>
                 </td>
-                <td>
+                <td className="hidden xs:flex">
                   <div className="flex justify-center">
                     <p className="px-1">401.7M</p>
                   </div>
@@ -93,12 +96,15 @@ const SquadPage = () => {
 
         <div className="flex justify-start w-full">
           <div className="w-full xl:w-[90%] overflow-x-scroll bg-white rounded-[5px] mt-2">
-            <div className="w-[1000px] lg:w-[1145px] xl:w-[1215px]">
+            <div className="w-full xs:w-[1000px] lg:w-[1145px] xl:w-[1215px]">
               <table className="w-[100%] text-[12px] sm:text-[14px]">
                 <thead className=" w-[100%] border-b py-1 font-semibold">
                   <td className="px-1">
-                    <div className="flex justify-start items-center rounded-[5px] h-[30px]">
+                    <div className="hidden xs:flex justify-start items-center rounded-[5px] h-[30px]">
                       Positions
+                    </div>
+                    <div className="xs:hidden flex justify-start items-center rounded-[5px] h-[30px]">
+                      Pos
                     </div>
                   </td>
                   <td className="px-1">
@@ -106,7 +112,7 @@ const SquadPage = () => {
                       -
                     </div>
                   </td>
-                  <td className="px-1">
+                  <td className="px-1 hidden xs:flex">
                     <div className="flex justify-start items-center rounded-[5px] h-[30px]">
                       -
                     </div>
@@ -121,19 +127,19 @@ const SquadPage = () => {
                       Age
                     </div>
                   </td>
+                  <td className="px-1 hidden xs:flex">
+                    <div className="flex justify-start items-center rounded-[5px] h-[30px]">
+                      Morale
+                    </div>
+                  </td>
                   <td className="px-1">
                     <div className="flex justify-start items-center rounded-[5px] h-[30px]">
                       Rat
                     </div>
                   </td>
-                  <td className="px-1">
+                  <td className="px-1 hidden xs:flex">
                     <div className="flex justify-start items-center rounded-[5px] h-[30px]">
                       Conditions
-                    </div>
-                  </td>
-                  <td className="px-1">
-                    <div className="flex justify-start items-center rounded-[5px] h-[30px]">
-                      Morale
                     </div>
                   </td>
                   <td className="px-1">
@@ -141,18 +147,18 @@ const SquadPage = () => {
                       Value
                     </div>
                   </td>
-                  <td className="px-1">
+                  <td className="px-1 hidden xs:flex">
                     <div className="flex justify-start items-center rounded-[5px] h-[30px]">
                       TB
                     </div>
                   </td>
-                  <td className="px-1">
+                  <td className="px-1 hidden xs:flex">
                     <div className="flex justify-center pr-3 items-center rounded-[5px] h-[30px]"></div>
                   </td>
                 </thead>
 
                 {Premier_League.map((item, i) => (
-                 <tr className="bg-white font-semibold border-y-2 h-[40px] py-4 border-[#57535391]">
+                  <tr className="bg-white font-semibold border-y-2 h-[40px] py-4 border-[#57535391]">
                     <td className="border-l-[6px]">
                       <div className="flex justify-start text-orange-400">
                         <p className="underline px-1 text-orange-400">GK</p>
@@ -165,8 +171,8 @@ const SquadPage = () => {
                         </p>
                       </div>
                     </td>
-                    <td>
-                      <div className="flex justify-start">
+                    <td className="hidden xs:flex h-[40px]">
+                      <div className="flex justify-start items-center">
                         <p className="bg-[#000] text-[9px] w-[33px] h-[20px] rounded-sm flex justify-center items-center text-white font-semibold px-2">
                           N
                         </p>
@@ -192,18 +198,19 @@ const SquadPage = () => {
                         <p>31</p>
                       </div>
                     </td>
-                    <td>
-                      <div className="flex justify-start">
-                        <p className="font-semibold">90</p>
-                      </div>
-                    </td>
-                    <td>
+                    <td className="hidden xs:flex">
                       <div className="flex justify-start">
                         <p className="text-[#5bc210]">100%</p>
                       </div>
                     </td>
                     <td>
                       <div className="flex justify-start">
+                        <p className="font-semibold">90</p>
+                      </div>
+                    </td>
+
+                    <td className="hidden xs:flex mt-2">
+                      <div className="flex justify-start items-center">
                         <p className="text-[#78cd3b] flex">
                           {" "}
                           <div>
@@ -218,12 +225,12 @@ const SquadPage = () => {
                         <p>28.7M</p>
                       </div>
                     </td>
-                    <td>
+                    <td className="hidden xs:flex">
                       <div className="flex justify-start">
                         <p>28 Aug</p>
                       </div>
                     </td>
-                    <td>
+                    <td className="hidden xs:flex">
                       <div className="flex justify-start">
                         <input type="checkbox" />
                       </div>

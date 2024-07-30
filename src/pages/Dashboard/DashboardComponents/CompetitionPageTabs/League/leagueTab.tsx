@@ -21,9 +21,9 @@ const LeagueTab = () => {
 
   return (
     <div className="flex flex-col mt-6 w-full">
-      <div className="w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
+      <div className="w-full xs:w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
         <div className="flex justify-between w-full">
-          <div className="w-[70%] flex font-semibold">
+          <div className="w-full xs:w-[70%] flex font-semibold text-[14px] xs:text-[16px]">
             {leagueNav.map((item) => (
               <div
                 onClick={() => setActiveTab(item.name)}
@@ -36,7 +36,7 @@ const LeagueTab = () => {
             ))}
           </div>
 
-          <div className="w-[20%] flex items-center">
+          <div className="w-[20%] hidden xs:flex items-center">
             <button className="flex  border items-center gap-2 text-black shadow drop-shadow-md px-10 py-1 rounded-[5px] bg-white  border-[#3379b79b] font-semibold ">
               Division 1
             </button>
@@ -45,7 +45,7 @@ const LeagueTab = () => {
 
         {activeTab === leagueNav[0].name && (
           <>
-            <div className="flex font-semibold">
+            <div className="flex font-semibold text-[14px] xs:text-[16px]">
               {tableNav.map((item) => (
                 <div
                   onClick={() => setleagueTab(item.name)}
@@ -72,7 +72,7 @@ const LeagueTab = () => {
 
         {activeTab === leagueNav[3].name && (
           <>
-            <div className="flex font-semibold">
+            <div className="flex font-semibold text-[13px] xs:text-[16px]">
               {statsNav.map((item) => (
                 <div
                   onClick={() => setStatsTab(item.name)}

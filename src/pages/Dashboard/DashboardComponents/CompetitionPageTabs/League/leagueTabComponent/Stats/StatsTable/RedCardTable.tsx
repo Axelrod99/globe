@@ -6,7 +6,7 @@ const RedCardTable = () => {
     <div className="">
     <table className="w-[100%] text-[12px] sm:text-[14px] text-black bg-white">
       <thead className=" w-[100%] py-1 font-semibold bg-[#EEEEEE]">
-        <td className="px-1 -l-[6px] -white">
+        <td className="px-1 hidden xs:flex">
           <div className="flex underline-offset-1 justify-start items-center rounded-[5px] h-[30px]">
             Pos
           </div>
@@ -36,17 +36,13 @@ const RedCardTable = () => {
             Apps
           </div>
         </td>
-        <td className="px-1">
-          <div className="underline flex justify-center items-center rounded-[5px] h-[30px]">
-            Ratio
-          </div>
-        </td>
+   
 
       </thead>
 
       {Premier_League.map((item, i) => (
         <tr className="bg-white font-semibold border-y-2 h-[40px] py-4 border-[#57535391]">
-          <td className="-l-[6px] ">
+          <td className="hidden xs:flex">
             <div className="flex justify-start font-normal">
               <p className="px-1">{i}</p>
             </div>
@@ -82,13 +78,7 @@ const RedCardTable = () => {
               </p>
             </div>
           </td>
-          <td>
-            <div className="flex justify-center">
-            <p className="flex items-center font-normal">
-                0.85
-              </p>
-            </div>
-          </td>
+    
         </tr>
       ))}
     </table>

@@ -8,7 +8,7 @@ const HistoryPage = () => {
 
   return (
     <div className="flex justify-center pb-[30px]">
-      <div className="flex flex-col gap-[10px] items-start mt-4 w-[90%]">
+      <div className="flex flex-col gap-[10px] items-start mt-4 w-[95%] md:w-[90%]">
         <div className="flex flex-col items-start w-[100%] lg:w-[85%] bg-white">
           <div className="flex justify-between w-full">
             <div className="w-[90%] sm:w-[70%] flex font-semibold">
@@ -25,7 +25,7 @@ const HistoryPage = () => {
             </div>
           </div>
 
-          <div className="w-full overflow-x-scroll">
+          <div className="w-full">
             <div className=""> 
             {activeTab === historyNav[0].name && <Overview />}
             {activeTab === historyNav[1].name && <History />}
@@ -34,34 +34,6 @@ const HistoryPage = () => {
         </div>
       </div>
     </div>
-
-    // <div className="flex justify-center pb-[30px]">
-    //   <div className="flex flex-col gap-[10px] items-center mt-4 w-[90%]">
-    //     <div className="flex flex-col mt-6 w-full">
-    //       <div className="w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
-    //         <div className="flex justify-between w-full">
-    //           <div className="w-[70%] flex font-semibold">
-    //             {historyNav.map((item) => (
-    //               <div
-    //                 onClick={() => setActiveTab(item.name)}
-    //                 className={`${
-    //                   activeTab === item.name
-    //                     ? "border-b-4 border-[#37778b]"
-    //                     : ""
-    //                 } w-full cursor-pointer flex justify-center items-center h-[60px]`}
-    //               >
-    //                 {item.name}
-    //               </div>
-    //             ))}
-    //           </div>
-    //         </div>
-
-    // {activeTab === historyNav[0].name && <Overview />}
-    // {activeTab === historyNav[1].name && <History />}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

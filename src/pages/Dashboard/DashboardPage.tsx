@@ -14,7 +14,7 @@ const DashboardPage = () => {
 
   return (
     <div
-      className="Roboto"
+      className="Roboto bg-black"
       style={{
         backgroundImage: `url(${wallpaper})`,
         backgroundSize: "cover",
@@ -23,14 +23,14 @@ const DashboardPage = () => {
       }}
     >
       <div className="flex justify-center mb-5">
-        <div className="border-b-2 shadow h-[55px] w-[90%] rounded-[5px] bg-[#343739d5] font-semibold">
-          <div className="grid grid-cols-3 lg:grid-cols-6 h-[55px]  text-white">
+        <div className="border-b-2 shadow h-[70px] lg:h-[55px] w-[95%] md:w-[90%] rounded-[5px] bg-[#343739d5] font-semibold">
+          <div className="grid grid-cols-3 lg:grid-cols-6 h-[70px] lg:h-[55px]  text-white">
             {DashboardNav.map((items) => (
               <div
                 onClick={() => setActiveTab(items.name)}
                 className={`cursor-pointer ${
                   activeTab === items.name ? "text-gray-400" : "text-white"
-                } hover:font-black flex items-center justify-center border rounded-l-[5px]`}
+                } hover:font-black flex items-center justify-center border`}
               >
                 {items.name}
               </div>
@@ -40,7 +40,7 @@ const DashboardPage = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <div className="border-2 py-2 justify-between shadow-lg w-[90%] rounded-t-[5px] gap-5 lg:gap-0 container flex flex-col lg:flex-row items-center px-4 font-semibold bg-white">
+        <div className="border-2 py-2 justify-between shadow-lg w-[95%] md:w-[90%] rounded-t-[5px] gap-5 lg:gap-0 flex flex-col lg:flex-row items-center px-4 font-semibold bg-white">
           <div className="flex gap-3 w-full">
             <div className="bg-yellow-100 h-[65px] w-[65px] rounded-[40px]" />
 

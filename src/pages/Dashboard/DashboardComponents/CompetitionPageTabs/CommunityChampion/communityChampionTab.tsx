@@ -7,9 +7,9 @@ const CommunityChampionTab = () => {
 
   return (
     <div className="flex flex-col mt-6 w-full">
-      <div className="w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
+      <div className="w-full xs:w-[800px] lg:w-[85%] flex flex-col mb-10 bg-white">
         <div className="flex justify-between w-full">
-          <div className="w-[70%] flex font-semibold">
+          <div className="w-[70%] text-[14px] xs:text-[16px] flex font-semibold">
             {communityChampion.map((item) => (
               <div
                 onClick={() => setActiveTab(item.name)}

@@ -9,7 +9,6 @@ import {
 import Honors from "./HistoryComponent/Honors/Honors";
 import BestManager from "./HistoryComponent/BestManager/BestManager";
 import HistoryTable from "./HistoryComponent/Table/HistoryTable";
-import Stats from "./HistoryComponent/Stats/Stats";
 import RecordTransfer from "./HistoryComponent/RecordTransfer/RecordTransfer";
 import GoalsTable from "./HistoryComponent/Stats/StatsTable/GoalsTable";
 import AssistTable from "./HistoryComponent/Stats/StatsTable/AssistTable";
@@ -20,6 +19,7 @@ import RedCardTable from "./HistoryComponent/Stats/StatsTable/RedCardTable";
 import NormalTable from "./HistoryComponent/Table/TableComponent/NormalTable";
 import FullTable from "./HistoryComponent/Table/TableComponent/FullTable";
 import FormTable from "./HistoryComponent/Table/TableComponent/FormTable";
+
 
 const History = () => {
   const [activeTab, setActiveTab] = useState(historyTableNav[0].name);
@@ -37,7 +37,7 @@ const History = () => {
           </div>
         </div>
 
-        <div className="w-full overflow-x-scroll">
+        <div className="w-full">
           <div className="">
             <div className="flex flex-col items-center">
               <div className="flex flex-col w-[98%] mt-5 font-semibold text-[20px] text-white">
@@ -50,9 +50,9 @@ const History = () => {
                 </button>
 
                 <div className="w-full">
-                  <div className="overflow-x-scroll">
-                    <div className="mt-4 text-[12px] w-[550px] sm:w-full text-black">
-                      <div className="flex font-semibold">
+                  <div className="xs:overflow-x-scroll">
+                    <div className="mt-4 text-[12px] w-full xs:w-[550px] sm:w-full text-black">
+                      <div className="flex font-semibold text-[10px] xs:text-[14px]">
                         {historyTableNav.map((item) => (
                           <div
                             onClick={() => setActiveTab(item.name)}

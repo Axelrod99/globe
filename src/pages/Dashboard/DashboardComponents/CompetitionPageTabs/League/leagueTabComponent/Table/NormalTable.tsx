@@ -11,7 +11,7 @@ const NormalTable = () => {
               Pos
             </div>
           </td>
-          <td className="px-1">
+          <td className="px-1 hidden xs:flex">
             <div className="flex justify-start items-center rounded-[5px] h-[30px]">
               -
             </div>
@@ -41,12 +41,12 @@ const NormalTable = () => {
               L
             </div>
           </td>
-          <td className="px-1">
+          <td className="px-1 hidden xs:flex">
             <div className="underline flex justify-start items-center rounded-[5px] h-[30px]">
               GF
             </div>
           </td>
-          <td className="px-1">
+          <td className="px-1 hidden xs:flex">
             <div className="underline flex justify-start items-center rounded-[5px] h-[30px]">
               GA
             </div>
@@ -70,7 +70,7 @@ const NormalTable = () => {
                 <p className="px-1">{i}</p>
               </div>
             </td>
-            <td className="  ">
+            <td className="hidden xs:flex">
               <div className="flex justify-start">
                 <p className="px-3 flex items-center gap-1">
                   <div className="w-6 h-4 bg-gray-700"></div>
@@ -106,12 +106,12 @@ const NormalTable = () => {
                 <p>99</p>
               </div>
             </td>
-            <td className="  ">
+            <td className="hidden xs:flex">
               <div className="flex justify-start">
                 <p className="px-1 font-normal">22</p>
               </div>
             </td>
-            <td>
+            <td className="hidden xs:flex">
               <div className="flex justify-start font-bold">
                 <p className="flex items-center font-normal">
                   144

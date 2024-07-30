@@ -5,10 +5,10 @@ const Fixture = () => {
   return (
     <div>
     <div className="h-[70px] w-full bg-white shadow flex justify-center items-center gap-1">
-      <button className="border border-black text-[#666] bg-[#f0f0f0] py-1 w-[180px] rounded-[5px] font-semibold">
+      <button className="border border-black text-[#666] bg-[#f0f0f0] py-1 w-[140px] xs:w-[180px] rounded-[5px] font-semibold">
         Previous
       </button>
-      <button className="border border-black text-[#666] bg-[#f0f0f0] py-1 w-[180px] rounded-[5px] font-semibold">
+      <button className="border border-black text-[#666] bg-[#f0f0f0] py-1 w-[140px] xs:w-[180px] rounded-[5px] font-semibold">
         Next
       </button>
     </div>
@@ -26,15 +26,15 @@ const Fixture = () => {
       {items.map((item) => (
         <tr className="bg-white hover:bg-[#EEEEEE] font-semibold border-b border-[#bbbbbb76] h-[40px] py-4">
           <td className="  ">
-            <div className="flex justify-center items-center py-2 gap-14 font-normal">
+            <div className="flex justify-around xs:justify-center items-center py-2 gap-2 xs:gap-14 font-normal">
               <div className="px-1">
-                <p className="text-[15px] hover:underline cursor-pointer">Manchester United</p>
+                <p className="text-[15px] hover:underline cursor-pointer text-center">Manchester United</p>
               </div>
               <div className="px-1 cursor-pointer flex gap-1 justify-center items-center border border-gray-300 text-[#666] hover:bg-[#817c7cb7] hover:text-white font-semibold w-[75px] rounded-[5px] h-[40px]">
                 21:00
               </div>
               <div className="px-1 ">
-                <p className="text-[15px] hover:underline cursor-pointer">Manchester City</p>
+                <p className="text-[15px] hover:underline cursor-pointer text-center">Manchester City</p>
               </div>
             </div>
 

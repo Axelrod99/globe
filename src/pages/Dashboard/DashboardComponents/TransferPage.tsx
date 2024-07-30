@@ -6,6 +6,7 @@ import MyTransferList from "./TransferPageTabs/myTransfer/myTransferList";
 import AllTransfers from "./TransferPageTabs/allTransfers/allTransfers";
 import LoanList from "./TransferPageTabs/loanList/loanList";
 import ConcernList from "./TransferPageTabs/concernList/concernList";
+import History from "./TransferPageTabs/history/history";
 
 const TransferPage = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -17,7 +18,7 @@ const TransferPage = () => {
 
   return (
     <div className="flex justify-center pb-[30px]">
-      <div className="flex flex-col gap-[10px] items-center mt-4 w-[90%]">
+      <div className="flex flex-col gap-[10px] items-center mt-4 w-[95%] md:w-[90%]">
         <div className="flex flex-col items-start w-full">
           <div className="relative">
             <button
@@ -54,6 +55,7 @@ const TransferPage = () => {
               {activeTab === TransferOption[2].name && <AllTransfers />}
               {activeTab === TransferOption[3].name && <LoanList />}
               {activeTab === TransferOption[4].name && <ConcernList />}
+              {activeTab === TransferOption[5].name && <History />}
             </div>
           </div>
         </div>
