@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import google from "../../assets/icons/Google svg.svg";
 import eye from "../../assets/icons/eye.png";
 import wallpaper from "../../assets/img/unsplash_lQpFRPrepQ8.png";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoggin, setIsLoggin] = useState(true);
+  const navigate = useNavigate()
 
   return (
     <div
-      className="flex flex-col items-center"
+      className="flex flex-col items-center h-screen"
       style={{
         backgroundImage: `url(${wallpaper})`,
         backgroundSize: "cover",
@@ -18,7 +20,7 @@ const LoginPage = () => {
       }}
     >
       {isLoggin ? (
-        <div className="flex flex-col items-center py-10 rounded-[12px] my-14 bg-white shadow w-[85%]">
+        <div className="flex flex-col items-center py-10 rounded-[12px] my-14 bg-white shadow w-[95%] xs:w-[85%]">
           <div className="mb-7">
             <button className="w-[300px] font-semibold flex gap-2 shadow shadow-[#00f16cb4] justify-center items-center h-[48px] rounded-[5px]">
               <img alt="/" src={google} />
@@ -26,7 +28,7 @@ const LoginPage = () => {
             </button>
           </div>
 
-          <div className="w-[60%] ">
+          <div className="w-[90%] xs:w-[60%] ">
             <div className="flex flex-col gap-[48px]">
               <div className="flex flex-col gap-[15px] sm:gap-[30px] font-semibold">
                 <div className="flex flex-col gap-[8px]">
@@ -58,7 +60,7 @@ const LoginPage = () => {
             </div>
 
             <div className="mt-10 flex justify-between items-end">
-              <button className="rounded-[8px] border-green-600 border bg-green-50 font-semibold drop-shadow h-[40px] w-[150px]">
+              <button onClick={() => navigate("/Dashboard")} className="rounded-[8px] border-green-600 border bg-green-50 font-semibold drop-shadow h-[40px] w-[150px]">
                 Login
               </button>
 
@@ -76,7 +78,7 @@ const LoginPage = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col items-center py-10 rounded-[12px] my-14 bg-white shadow w-[85%]">
+        <div className="flex flex-col items-center py-10 rounded-[12px] my-14 bg-white shadow w-[95%] xs:w-[85%]">
           <div className="mb-7">
             <button className="w-[300px] font-semibold flex gap-2 shadow shadow-[#00f16cb4] justify-center items-center h-[48px] rounded-[5px]">
               <img alt="/" src={google} />
@@ -84,7 +86,7 @@ const LoginPage = () => {
             </button>
           </div>
 
-          <div className="w-[60%] ">
+          <div className="w-[90%] xs:w-[60%] ">
             <div className="flex flex-col gap-[48px]">
               <div className="flex flex-col gap-[15px] sm:gap-[30px] font-semibold">
                 <div className="flex flex-col gap-[8px]">
@@ -136,7 +138,7 @@ const LoginPage = () => {
             </div>
 
             <div className="mt-10 flex justify-between items-end">
-              <button className="rounded-[8px] border-green-600 border bg-green-50 font-semibold drop-shadow h-[40px] w-[150px]">
+              <button onClick={() => navigate("/Dashboard")} className="rounded-[8px] border-green-600 border bg-green-50 font-semibold drop-shadow h-[40px] w-[150px]">
                 Sign up
               </button>
 
