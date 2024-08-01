@@ -121,3 +121,45 @@ export const Premier_League = [
   { name: "West Ham" },
   { name: "Wolves" },
 ];
+
+export const positionContent = [
+  { value: "D(L)", label: "D(L)" },
+  { value: "D(C)", label: "D(C)" },
+  { value: "D(R)", label: "D(R)" },
+  { value: "D(RC)", label: "D(RC)" },
+  { value: "D(LC)", label: "D(LC)" },
+  { value: "D(RLC)", label: "D(RLC)" },
+  { value: "DM(C)", label: "DM(C)" },
+  { value: "DM(R)", label: "DM(R)" },
+  { value: "DM(L)", label: "DM(L)" },
+  { value: "DM(RLC)", label: "DM(RLC)" },
+  { value: "M(C)", label: "M(C)" },
+  { value: "M(L)", label: "M(L)" },
+  { value: "M(R)", label: "M(R)" },
+  { value: "M(RLC)", label: "M(RLC)" },
+  { value: "AM(C)", label: "AM(C)" },
+  { value: "AM(L)", label: "AM(L)" },
+  { value: "AM(R)", label: "AM(R)" },
+  { value: "AM(RLC)", label: "AM(RLC)" },
+  { value: "F(C)", label: "F(C)" },
+  { value: "F(L)", label: "F(L)" },
+  { value: "F(R)", label: "F(R)" },
+  { value: "F(RLC)", label: "F(RLC)" },
+];
+
+export const youthBoolean = [
+  { value: "true", label: "true" },
+  { value: "false", label: "false" },
+]
+
+export const poojaGroup = [
+  { value: "Manchester City", label: "Manchester City" },
+];
+
+export const bukibehGroup = [
+  { value: "Arsenal", label: "Arsenal" },
+];
+
+export const champFXTGroup = [
+  { value: "Chelsea", label: "Chelsea" },
+];
