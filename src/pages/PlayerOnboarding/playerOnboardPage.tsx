@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
-import { bukibehGroup, champFXTGroup, poojaGroup, positionContent, youthBoolean } from "../../utils/data";
+import {
+  bukibehGroup,
+  champFXTGroup,
+  poojaGroup,
+  positionContent,
+  youthBoolean,
+} from "../../utils/data";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { format } from "date-fns";
@@ -34,21 +40,19 @@ const PlayerOnboardPage = () => {
     setSelectedGroup(selected);
   };
 
+  const [selectedYouthStatus, setSelectedYouthStatus] = useState<any>([]);
+  const handleSelectYouthChange = (selected: any) => {
+    setSelectedYouthStatus(selected);
+  };
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
-  const [selectedOptions2, setSelectedOptions2] = useState<Option[]>([]);
-  const [club, setClub] = useState("");
   const [rating, setRating] = useState("");
   const [value, setValue] = useState("");
-  const [youth, setYouth] = useState("");
   const [wages, setwages] = useState("");
   const handleSelectChange = (selected: any) => {
     setSelectedOptions(selected);
-  };
-
-  const handleSelectChange2 = (selected: any) => {
-    setSelectedOptions2(selected);
   };
 
   const User_id = localStorage.getItem("ids");
@@ -57,17 +61,16 @@ const PlayerOnboardPage = () => {
     setIsLoading(true);
 
     const positionArray = selectedOptions.map((option) => option.value);
-    const selectedYouth = selectedOptions2.map((option) => option.value);
 
     const newPlayer = {
       firstName: firstName,
       lastName: lastName,
       position: positionArray,
       DOB: startDate,
-      club: club,
+      club: selectedGroup.value,
       rating: rating,
       value: value,
-      youthTeam: selectedYouth,
+      youthTeam: selectedYouthStatus.value,
       wages: wages,
     };
 
@@ -77,12 +80,23 @@ const PlayerOnboardPage = () => {
           if (response.status === 200) {
             toast.success(`new player created`);
           }
+          setIsLoading(false);
+          setFirstName("");
+          setLastName("");
+          setSelectedOptions([]);
+          setStartDate(null);
+          setSelectedGroup([]);
+          setRating("");
+          setValue("");
+          setwages("");
+          setSelectedYouthStatus([]);
         })
         .catch((error) => {
           toast.error(error.response?.data?.message);
           toast.error(error.data.message, {
-            position: "top-right", // Or use toast.POSITION.TOP_RIGHT (depending on library)
+            position: "top-right",
           });
+          setIsLoading(false);
         });
     } catch (error) {
       toast.error(`An error occured`);
@@ -93,8 +107,6 @@ const PlayerOnboardPage = () => {
     !firstName ||
     !lastName ||
     selectedOptions.length === 0 ||
-    selectedOptions2.length === 0 ||
-    !club ||
     !rating ||
     !value ||
     !wages;
@@ -102,7 +114,7 @@ const PlayerOnboardPage = () => {
   const userGroupOptions: Record<string, any> = {
     pooja: poojaGroup,
     bukibeh: bukibehGroup,
-    champFXT: champFXTGroup
+    champFXT: champFXTGroup,
   };
 
   return (
@@ -228,8 +240,8 @@ const PlayerOnboardPage = () => {
                 <div className="relative border bg-[#f4f5f5] font-semibold h-[42px] rounded-lg w-full px-[1px]">
                   <Select
                     options={youthBoolean}
-                    value={selectedOptions2}
-                    onChange={handleSelectChange2}
+                    value={selectedYouthStatus}
+                    onChange={handleSelectYouthChange}
                     className="absolute top-[1px] rounded-lg"
                   />
                 </div>
