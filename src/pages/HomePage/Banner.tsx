@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/icons/logo.png";
 import { useNavigate } from "react-router-dom";
+import AxiosInstance from "../../api/axios";
 
 const Banner = () => {
+  const [loading, setLoading] = useState(false);
 const navigate = useNavigate()
+const [parentItems, setParentItems] = useState([] as any)
+
+const fetchJobs = async () => {
+  try {
+    setLoading(true);
+    const res = await AxiosInstance.get(`/comment/all`);
+    // if (Array.isArray(res.data)) {
+    //   setParentItems(res.data);
+    //   // console.log(parentJob);
+    // }
+    console.log(res.data)
+  } catch (error) {
+    console.error(error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+useEffect(() => {
+  fetchJobs();
+}, []);
+
 
   return (
     <div className="border-[#e99827] border-b-[10px] wallpaper px-[10px] xs:px-[20px] sm:px-[40px] pt-28 flex flex-col items-center gap-12 pb-[75px]">
