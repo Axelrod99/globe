@@ -2,11 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Tapestry';
+  src: url('./assets/font/Tapestry-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'krona-one';
+  src: url('./assets/font/KronaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'KumbhSans-Regular';
+  src: url('./assets/font/KumbhSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'KumbhSans-Bold';
+  src: url('./assets/font/KumbhSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-sans';
+  src: url('./assets/font/NunitoSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-thin';
+  src: url('./assets/font/OutfitLight1.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-regular';
+  src: url('./assets/font/OutfitRegular.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-semibold';
+  src: url('./assets/font/OutfitSemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-black';
+  src: url('./assets/font/OutfitBlack.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-extrabold';
+  src: url('./assets/font/OutfitExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-bold';
+  src: url('./assets/font/OutfitBold.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit-medium';
+  src: url('./assets/font/OutfitMedium.ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/font/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-semibold';
+  src: url('./assets/font/Lato-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-thin';
+  src: url('./assets/font/Lato-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-light';
+  src: url('./assets/font/Lato-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-black';
+  src: url('./assets/font/Lato-Heavy.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-medium';
+  src: url('./assets/font/Lato-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Axiforma-medium';
+  src: url('./assets/font/Axiforma-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Axiform-regular';
+  src: url('./assets/font/Axiforma-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Axiform-thin';
+  src: url('./assets/font/Axiforma-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Axiform-light';
+  src: url('./assets/font/Axiforma-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Axiforma-bold';
+  src: url('./assets/font/Axiforma-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-black';
+  src: url('./assets/font/Montserrat-Black.otf');
+}
+
+@font-face {
+  font-family: 'Lato-Italics';
+  src: url('./assets/font/Lato-ThinItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-semibold';
+  src: url('./assets/font/Montserrat-SemiBold.otf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato' ,'sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,4 +143,117 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.KumbhSans-Regular {
+  font-family: 'KumbhSans-Regular';
+}
+
+.KumbhSans-Bold {
+  font-family: 'KumbhSans-Bold';
+}
+
+.krona-one{
+  font-family:
+  'krona-one';
+}
+
+.hire{
+  font-family:
+  'Tapestry';
+}
+
+.nunito-sans {
+  font-family: 'Nunito-sans';
+}
+
+.outfit {
+  font-family: 'Outfit-regular';
+}
+
+
+.outfit-thin {
+  font-family: 'Outfit-thin';
+}
+
+.outfit-black {
+  font-family: 'Outfit-black';
+}
+
+.outfit-semibold {
+  font-family: Outfit-semibold;
+}
+
+.outfit-extrabold {
+  font-family: 'Outfit-extrabold';
+}
+
+.outfit-medium {
+  font-family: 'Outfit-medium';
+}
+
+.outfit-bold {
+  font-family: 'Outfit-bold';
+}
+
+.thin {
+  font-family: 'Lato-thin';
+}
+
+.medium {
+  font-family: 'Lato-medium';
+}
+
+.Axiforma {
+  font-family: 'Axiform-regular';
+}
+
+.Axiforma-thin {
+  font-family: 'Axiform-thin';
+}
+
+.Axiforma-light {
+  font-family: 'Axiform-light';
+}
+
+.Montserrat {
+  font-family: 'Montserrat-black';
+}
+
+.Montserrat_semibold {
+  font-family: 'Montserrat-semibold';
+}
+
+.Axiforma-bold {
+  font-family: 'Axiforma-bold';
+}
+
+.Lato-Italics {
+  font-family: 'Lato-Italics';
+}
+
+.Lato-Light {
+  font-family: 'Lato-light';
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1D4C41;
+  border-radius: 5px;
+
+}
+
+#scroll-image::-webkit-scrollbar {
+  display: none;
+}
+
+#scroll-image {
+-ms-overflow-style: none; 
+scrollbar-width: none;  
+}
+
+.wallpaper {
+  background-image: url(./assets/img/wallpaper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 85%;
 }

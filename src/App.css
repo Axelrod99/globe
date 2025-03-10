@@ -67,3 +67,49 @@ html {
   background-color: #555; 
 }
 
+.scroll-container {
+  width: full; /* Adjust as needed */
+  overflow-x: auto;
+  white-space: nowrap; /* Prevent contents from wrapping */
+}
+
+.scroll-containers {
+  width: full; /* Adjust as needed */
+  overflow-x: auto;
+
+}
+
+.scroll-content {
+  display: inline-block; /* Display contents in a row */
+  margin-right: 10px;
+}
+
+#scroll-image::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust as needed */
+  }
+}
+
+@keyframes scrollXReverse {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll-x {
+  animation: scrollX 20s linear infinite; /* Adjust speed as needed */
+}
+
+.animate-scroll-x-reverse {
+    animation: scrollXReverse 20s linear infinite;
+}
