@@ -9,12 +9,14 @@ const SectionOne = () => {
       <div className="flex flex-col justify-center gap-3 w-full">
         <p className="text-[13px]">THE MAIN EVENT</p>
         <p className="text-[30px] w-full md:w-[75%] lg:w-[65%]">
-          OUR UNBELIEVABLE MUSIC FESTIVAL
+          A CALL TO CELEBRATE AND LOOK AHEAD
         </p>
         <p>
-          Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          GLA invites members, past and present, as well as the wider community,
+          to join in this celebration of faith, unity, and impact. As we look
+          back in gratitude, we also look ahead with renewed purpose—to build
+          upon the foundation laid over the past 40 years and equip the next
+          generation for greater exploits.
         </p>
         {/* <button className="mt-5 text-[#11131A] bg-[#9bf9b3] w-[200px] h-[50px] shadow border text-[17px]">
           Festival Info

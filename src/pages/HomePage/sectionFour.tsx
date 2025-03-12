@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import envlope_icon from "../../assets/icons/envelope.png";
 import envelope_purple from "../../assets/icons/purple-envelope.png";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const SectionFour = () => {
+  // console.log(localStorage);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [showParentEmail, setParentEmail] = useState(true);
+  const [showParentEmail, setParentEmail] = useState<any>(null);
   const [tokens, setTokens] = useState<any>({
     token1: "",
     token2: "",
@@ -13,6 +19,8 @@ const SectionFour = () => {
     token5: "",
     token6: "",
   });
+
+  const emailss = localStorage.getItem("glais40Email");
 
   const [currentInputIndex, setCurrentInputIndex] = useState(0);
 
@@ -37,17 +45,73 @@ const SectionFour = () => {
     }
   };
 
+  const handleJoin = () => {
+    setLoading(true);
+
+    const newUserData = {
+      email: email,
+    };
+
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/auth/Register`, newUserData)
+
+      .then((response) => {
+        if (response.status === 200) {
+          localStorage.setItem("glais40Email", email);
+          localStorage.setItem(
+            "glais40VerificationToken",
+            response.data.data.VerificationToken
+          );
+          setShowPopup(true);
+        }
+      })
+      .catch(({ error, response }) => {
+        if (!response) {
+          toast("Please check internet connection", {
+            position: "top-right",
+          });
+          setLoading(false);
+        } else {
+          toast.error(response.data.message, {
+            position: "top-right",
+          });
+        }
+      });
+  };
+
+  const handleCheck = async () => {
+    const allTokens = Object.values(tokens).join("");
+    setIsLoading(true);
+
+    const verificationCode = localStorage.getItem("glais40VerificationToken");
+    const emailss = localStorage.getItem("glais40Email");
+
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    if (verificationCode === allTokens) {
+      setShowPopup(false);
+      setParentEmail(emailss);
+      localStorage.setItem("glais40VerificationToken", "");
+    }
+  };
+
+  useEffect(() => {
+    if (emailss !== null) {
+      setParentEmail(emailss);
+    }
+  }, [emailss]);
+
   return (
     <div className="py-[90px] flex flex-col gap-[150px] bg-[#F8F8F8]">
       {showParentEmail ? (
         <div className="relative flex flex-col gap-[24px] w-full items-center">
           <div className="flex flex-col gap-6 items-start w-[75%]">
-          <div className="z-[9] flex justify-between w-fit border-b-2 border-[#6d6f72]">
-            <p className="text-[32px] outfit-semibold text-[#6d6f72]">Johndoe@gmail.com</p>
+            <div className="z-[9] flex justify-between w-fit border-b-2 border-[#6d6f72]">
+              <p className="text-[32px] outfit-semibold text-[#6d6f72]">
+                {showParentEmail}
+              </p>
+            </div>
           </div>
-          </div>
-
-          
 
           <div className="absolute left-0 right-0 top-0 bottom-72 text-[65px] sm:text-[90px] md:text-[110px] lg:text-[130px] xl:text-[145px] text-[#6d6f7294] opacity-10 flex justify-center krona-one">
             NEWSLETTER
@@ -60,9 +124,12 @@ const SectionFour = () => {
               <input
                 className="h-[65px] w-full bg-transparent text-[28px]"
                 placeholder="Enter Your Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                onClick={() => setShowPopup(true)}
+                // onClick={() => setShowPopup(true)}
+                onClick={handleJoin}
                 className="text-[#11131a] text-[14px] krona-one flex justify-center items-center gap-2 hover:text-purple-400"
               >
                 <span className="flex justify-center items-center pb-1">
@@ -94,7 +161,7 @@ const SectionFour = () => {
           </div>
 
           {showPopup && (
-            <div className=" bg-[#00000015] absolute z-[9] left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center h-[190px]">
+            <div className=" bg-[#00000015] absolute z-[9] left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center h-[220px]">
               <div className="flex flex-col gap-3">
                 <div className="flex justify-end">
                   <div
@@ -122,6 +189,15 @@ const SectionFour = () => {
                       />
                     </div>
                   ))}
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    onClick={handleCheck}
+                    className="h-[35px] w-[100px] rounded-[5px] shadow bg-[#9bf9b3] text-white mt-2"
+                  >
+                    Submit
+                  </button>
                 </div>
               </div>
 

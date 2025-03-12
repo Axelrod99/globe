@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate()
+  
   useEffect(() => {
     const scrollContainer: HTMLElement | null =
       document.querySelector(".scroll-container");

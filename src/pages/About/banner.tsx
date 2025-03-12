@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import dropdown from '../../assets/icons/dropdown.svg'
 import { textList } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate()
+
   useEffect(() => {
     const scrollContainer: HTMLElement | null =
       document.querySelector(".scroll-container");
@@ -39,6 +42,8 @@ const Banner = () => {
           ))}
         </div>
       </div>
+
+      <p onClick={() => navigate('/')} className="Axiforma-semibold absolute top-4 sm:top-7 left-6 sm:left-10 text-[20px] xs:text-[28px] cursor-pointer">glais40</p>
     </div>
   );
 };
