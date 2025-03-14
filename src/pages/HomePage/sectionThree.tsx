@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { textList } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 
 const SectionThree = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const scrollContainer: HTMLElement | null =
-      document.querySelector(".scroll-container");
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
-    function autoScroll(): void {
-      if (scrollContainer) {
-        scrollContainer.scrollLeft += 50;
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+
+    if (scrollContainer) {
+      const intervalId = setInterval(() => {
+        scrollContainer.scrollLeft += 1;
 
         if (
           scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
@@ -19,10 +20,10 @@ const SectionThree = () => {
         ) {
           scrollContainer.scrollLeft = 0;
         }
-      }
-    }
+      }, 10);
 
-    setInterval(autoScroll, 1700);
+      return () => clearInterval(intervalId);
+    }
   }, []);
 
   return (
@@ -54,13 +55,14 @@ const SectionThree = () => {
 
       <div>
         <div
+          ref={scrollContainerRef}
           id="scroll-image"
-          className="scroll-container whitespace-nowrap flex gap-5"
+          className="scroll-container whitespace-nowrap flex gap-[40px]"
         >
           {textList.map((items, i) => (
             <div className="scroll-content relative">
               <div className="flex items-center gap-5">
-                <div className="min-w-[536px] h-[295px] bg-gray-50 gap-9"></div>
+                <div className="min-w-[380px] xs:min-w-[420px] sm:min-w-[536px] h-[295px] bg-gray-50 gap-9"></div>
               </div>
             </div>
           ))}

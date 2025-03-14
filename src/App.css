@@ -93,13 +93,13 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Adjust as needed */
+    transform: translateX(-50%); /* Adjust as needed */
   }
 }
 
 @keyframes scrollXReverse {
     0%{
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     100%{
         transform: translateX(0);

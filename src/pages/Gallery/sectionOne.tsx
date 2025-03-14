@@ -23,7 +23,7 @@ const SectionOne = () => {
       }
     }
 
-    setInterval(autoScroll, 1700);
+    setInterval(autoScroll, 1000);
   }, []);
 
 
@@ -58,7 +58,7 @@ const SectionOne = () => {
         <div className="relative flex flex-col gap-10 bg-[#F8F8F8] px-[10px] xs:px-[20px] sm:px-[40px] py-[80px] krona-one">
           <p className="text-[25px]">Share our memories with us</p>
 
-          <div className="grid grid-cols-3 gap-y-10 gap-x-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
             {dateList.map((items) => (
               <div className="flex flex-col gap-2">
                 <div

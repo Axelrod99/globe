@@ -7,7 +7,7 @@ import cloud_icon from "../../../assets/icons/cloud.png";
 const Footer = () => {
   return (
     <div className="py-[90px] px-[10px] xs:px-[20px] sm:px-[30px] bg-[#6f6f6f] text-[#ffffff] krona-one flex flex-col gap-[90px]">
-      <div className="text-[31px]">
+      <div className="text-[24px] xs:text-[28px] md:text-[31px] flex flex-col gap-2 sm:gap-0">
         <p>WE CREATED AN INCREDIBLE</p>
         <p className="text-[#9d9ea1]">MUSIC SHOW</p>
       </div>

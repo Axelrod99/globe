@@ -25,15 +25,15 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row pt-[80px] pb-[120px] bg-[#f6f6f6] krona-one gap-[40px]">
+    <div className="relative flex flex-col md:flex-row pt-[80px] pb-[120px] bg-[#f6f6f6] krona-one gap-[20px] xs:gap-[40px]">
       <div className="flex flex-col gap-2 text-[#11131A] pl-[10px] xs:pl-[20px] sm:pl-[40px]">
         <p className="text-[13px]">HUGE HONOR</p>
         <p className="text-[30px] leading-[35px]">OUR AWARDS</p>
       </div>
 
-      <div className="flex flex-col gap-[40px] pl-[10px] xs:pl-[20px] sm:pl-[40px]">
+      <div className="flex flex-col gap-[40px] pl-[10px] xs:pl-[20px] sm:pl-[40px] pr-[10px] md:pr-0">
         <div className="flex flex-col items-start mt-[25px] border-b border-b-gray-200">
-          <p className="text-[#6d6f72] text-[17px] KumbhSans-Regular w-[75%] leading-[30px] pb-[30px]">
+          <p className="text-[#6d6f72] text-[17px] KumbhSans-Regular w-full xs:w-[75%] leading-[30px] pb-[30px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod incididunt ut labore et dolore magna aliqua. Nisl tincidunt
             eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum
