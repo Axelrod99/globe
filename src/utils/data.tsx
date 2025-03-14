@@ -4,20 +4,23 @@ export const textList = [
   { name: "Our music gives emotions and energizes" },
   { name: "Our music gives emotions and energizes" },
   { name: "Our music gives emotions and energizes" },
+  { name: "Our music gives emotions and energizes" },
+  { name: "Our music gives emotions and energizes" },
+  { name: "Our music gives emotions and energizes" },
+  { name: "Our music gives emotions and energizes" },
+  { name: "Our music gives emotions and energizes" },
 ];
 
+export const dashboardNav = [
+  { name: "Create Post" },
+  { name: "Posts" },
+]
+
 export const dateList = [
-  { name: "2015" },
-  { name: "2016" },
-  { name: "2017" },
-  { name: "2018" },
-  { name: "2019" },
-  { name: "2020" },
-  { name: "2021" },
-  { name: "2022" },
-  { name: "2023" },
-  { name: "2024" },
-  { name: "2025" },
+  { name: "2015-2024" },
+  { name: "2005-2014" },
+  { name: "1995-2004" },
+  { name: "1985-1994" },
 ];
 
 export const scheduleArray = [

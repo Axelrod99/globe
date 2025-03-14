@@ -22,16 +22,14 @@ const SectionThree = () => {
       }
     }
 
-    // setInterval(autoScroll, 1700);
-
-    setInterval(autoScroll, 10000);
+    setInterval(autoScroll, 1700);
   }, []);
 
   return (
     <div className="flex flex-col gap-[90px] bg-[#cccdcd] text-white krona-one py-[80px]">
       <div className=" gap-16 flex w-full px-[10px] xs:px-[20px] sm:px-[30px]">
-        <div className="flex max-w-[350px] justify-center">
-        <div className="w-[320px] h-[320px] shadow border-8 rounded-[347px] bg-gray-400" />
+        <div className="hidden md:flex max-w-[350px] justify-center">
+          <div className="w-[320px] h-[320px] shadow border-8 rounded-[347px] bg-gray-400" />
         </div>
         <div className="flex flex-col justify-center gap-3 w-full">
           <p className="text-[13px]">THE MAIN EVENT</p>

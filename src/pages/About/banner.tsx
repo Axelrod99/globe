@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import dropdown from '../../assets/icons/dropdown.svg'
+import dropdown from "../../assets/icons/dropdown.svg";
 import { textList } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const scrollContainer: HTMLElement | null =
@@ -26,6 +26,8 @@ const Banner = () => {
     setInterval(autoScroll, 1700);
   }, []);
 
+  const duplicatedTextList = [...textList, ...textList, ...textList];
+
   return (
     <div className="relative wallpaper px-[10px] xs:px-[20px] sm:px-[40px] pt-28 flex flex-col items-center gap-[16px] pb-[75px] krona-one text-[#333]">
       <p className="text-[30px]">ABOUT US</p>
@@ -34,16 +36,26 @@ const Banner = () => {
       </div>
 
       <div className="absolute bottom-0 bg-[#eec48a]">
-        <div className="whitespace-nowrap flex gap-5 animate-scroll-x bg-[#eec48a] text-[#333]">
-          {textList.map((items, i) => (
-            <div key={i} className="scroll-content relative bg-[#eec48a]">
-              <p className="text-[20px] bg-[#eec48a] py-1">{items.name}</p>
-            </div>
-          ))}
+        <div className="whitespace-nowrap overflow-hidden bg-[#eec48a] text-[#333]">
+          <div className="flex animate-continuous-scroll bg-[#eec48a]">
+            {duplicatedTextList.map((items, i) => (
+              <div
+                key={i}
+                className="scroll-content relative bg-[#eec48a] px-5"
+              >
+                <p className="text-[20px] bg-[#eec48a] py-1">{items.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <p onClick={() => navigate('/')} className="Axiforma-semibold absolute top-4 sm:top-7 left-6 sm:left-10 text-[20px] xs:text-[28px] cursor-pointer">glais40</p>
+      <p
+        onClick={() => navigate("/")}
+        className="Axiforma-semibold absolute top-4 sm:top-7 left-6 sm:left-10 text-[20px] xs:text-[28px] cursor-pointer"
+      >
+        glais40
+      </p>
     </div>
   );
 };

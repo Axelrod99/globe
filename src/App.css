@@ -113,3 +113,17 @@ html {
 .animate-scroll-x-reverse {
     animation: scrollXReverse 20s linear infinite;
 }
+
+
+.animate-continuous-scroll {
+  animation: scroll-x 20s linear infinite; /* Adjust 20s for speed */
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-20%); /* Scroll to the end of the first half */
+  }
+}

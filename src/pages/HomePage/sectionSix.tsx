@@ -3,11 +3,11 @@ import React from "react";
 const SectionSix = () => {
   return (
     <div className="flex w-full">
-      <div className=" flex w-full bg-[#f1ff4f] justify-center items-center">
+      <div className="hidden md:flex w-full bg-[#f1ff4f] justify-center items-center">
         <div className="min-w-[350px] h-[500px] bg-gray-500" />
       </div>
       <div className=" krona-one flex w-full bg-[#11131A] text-white flex-col items-center text-start py-[80px]">
-        <div className="flex flex-col max-w-[333px]">
+        <div className="flex flex-col max-w-[90%] sm:max-w-[80%] md:max-w-[333px]">
           <p className="text-[13px]">WHO WE ARE</p>
           <div className="flex flex-col gap-[20px]">
             <p className="text-[35px]">GUIDING LIGHT ASSEMBLY</p>

@@ -119,10 +119,10 @@ const SectionFour = () => {
         </div>
       ) : (
         <div className="relative flex flex-col gap-[24px] w-full items-center">
-          <div className="flex flex-col gap-6 items-start w-[75%]">
+          <div className="flex flex-col gap-6 items-start w-[92%] sm:w-[85%] md:w-[75%]">
             <div className="z-[9] flex justify-between w-full border-b border-[#6d6f72]">
               <input
-                className="h-[65px] w-full bg-transparent text-[28px]"
+                className="h-[65px] w-full bg-transparent text-[20px] sm:text-[24px] md:text-[28px]"
                 placeholder="Enter Your Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -132,7 +132,7 @@ const SectionFour = () => {
                 onClick={handleJoin}
                 className="text-[#11131a] text-[14px] krona-one flex justify-center items-center gap-2 hover:text-purple-400"
               >
-                <span className="flex justify-center items-center pb-1">
+                <span className="hidden sm:flex justify-center items-center pb-1">
                   <img
                     className="w-[45px] h-[22px]"
                     src={envlope_icon}
@@ -207,7 +207,7 @@ const SectionFour = () => {
         </div>
       )}
 
-      <div className="px-[10px] xs:px-[20px] sm:px-[30px] flex gap-7">
+      <div className="px-[10px] xs:px-[20px] sm:px-[30px] flex flex-col md:flex-row gap-7">
         <div className="min-w-[330px] bg-[#333] h-[480px]" />
 
         <div className="bg-[#585656] h-[480px] w-full" />
