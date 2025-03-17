@@ -160,7 +160,7 @@ const SectionFour = () => {
                   <img
                     className="w-[45px] h-[22px]"
                     src={envlope_icon}
-                    alt=""
+                    alt="/"
                   />
                 </span>
                 {loading ? "Loading..." : "Subscribe"}

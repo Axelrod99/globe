@@ -165,12 +165,12 @@ const Signup = () => {
     <div className="h-screen">
       <div className="w-full flex">
         <div className="hidden md:flex w-full">
-          <img className="w-full h-screen" src={wallpaper} alt="" />
+          <img className="w-full h-screen" src={wallpaper} alt="/" />
         </div>
         <div className="flex justify-center w-full bg-[#F8F8F8] relative">
           <div className="pt-[70px] px-[15px] xs:px-[20px] sm:px-[40px] flex flex-col items-center w-full">
             <div>
-              <img className="h-[130px] w-[130px]" src={logo} alt="" />
+              <img className="h-[130px] w-[130px]" src={logo} alt="/" />
             </div>
 
             <div className="flex flex-col gap-[15px] sm:gap-[25px] font-semibold w-full mt-8">
@@ -281,7 +281,7 @@ const Signup = () => {
             onClick={() => navigate("/")}
             className="absolute left-5 top-5 bg-black h-9 w-9 rounded-[40px] flex justify-center items-center"
           >
-            <img src={arrow} className="cursor-pointer" alt="" />
+            <img src={arrow} className="cursor-pointer" alt="/" />
           </div>
         </div>
       </div>

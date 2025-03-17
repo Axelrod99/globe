@@ -62,7 +62,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
     <>
       {loading ? (
         <div className="h-[70vh] w-full flex justify-center items-center">
-          <img src={loadingIcon} alt="" />
+          <img src={loadingIcon} alt="/" />
         </div>
       ) : (
         <div className="flex flex-col gap-10 bg-[#F8F8F8] px-[10px] xs:px-[20px] sm:px-[40px] py-[80px] krona-one">
@@ -71,7 +71,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
               onClick={() => navigate("/")}
               className="cursor-pointer h-[30px] w-[30px] bg-black rounded-[40px] flex justify-center items-center "
             >
-              <img src={arrow} alt="" />
+              <img src={arrow} alt="/" />
             </div>
             <p className="text-[25px]">{`${parentCategories.category} memories`}</p>
           </div>
@@ -90,14 +90,14 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
                       <img
                         src={loadingIcon}
                         className="w-full h-[270px]"
-                        alt=""
+                        alt="/"
                       />
                     ) : (
                       <img
                         onClick={() => setShowComments(items)}
                         src={items.image}
                         className="w-full h-[270px] cursor-pointer"
-                        alt=""
+                        alt="/"
                       />
                     )}
                   </>
@@ -110,7 +110,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
                     onClick={() => setShowComments(items)}
                     className="flex gap-1 items-center pr-3 cursor-pointer hover:border-b border-b-black"
                   >
-                    <img className="h-[20px]" src={commentIcon} alt="" />
+                    <img className="h-[20px]" src={commentIcon} alt="/" />
                     <p className="text-[14px]">{items.comments.length}</p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
                       onClick={() => setShowDeleteModal(items._id)}
                       className="h-6 w-6 z-[9] cursor-pointer"
                       src={delete_icon}
-                      alt=""
+                      alt="/"
                     />
                   </div>
                 )} */}

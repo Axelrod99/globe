@@ -48,7 +48,7 @@ const SectionFive = () => {
             </td>
             {/* <td className="">
               <div className="flex justify-start items-start rounded-[5px] h-[30px] ">
-                <img src={arrow} className="h-[20px] w-[20px]" alt="" />
+                <img src={arrow} className="h-[20px] w-[20px]" alt="/" />
               </div>
             </td> */}
           </tr>

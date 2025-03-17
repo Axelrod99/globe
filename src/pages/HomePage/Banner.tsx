@@ -43,7 +43,7 @@ const Banner = () => {
 <Countdown targetDate={targetDate} />
 
 <div className="w-full md:w-[700px] flex justify-center sm:justify-between items-center">
-  <img src={banner_img} alt="" />
+  <img src={banner_img} alt="/" />
 </div>
 </div>
 

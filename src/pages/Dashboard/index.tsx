@@ -99,7 +99,7 @@ const Dashboard = () => {
           style={{ backgroundImage: `url(${wallpaper_dash})` }}
         >
           <div className="flex items-center h-[90px] px-[20px] sm:px-[40px] bg-white shadow border-b justify-between">
-            <img className="h-[70px] w-[70px]" src={logo} alt="" />
+            <img className="h-[70px] w-[70px]" src={logo} alt="/" />
 
             <button
               onClick={() => setShowLoggoutModal(true)}
@@ -213,7 +213,7 @@ const Dashboard = () => {
       ) : (
         <div className="h-[85vh] flex flex-col gap-3 justify-center items-center text-[28px]">
           <div>
-            <img src={logo} className="h-[220px] w-[220px]" alt="" />
+            <img src={logo} className="h-[220px] w-[220px]" alt="/" />
           </div>
           <p className="krona-one">Kindly log in</p>
           <button onClick={() => navigate('/Admin-Signup')} className="rounded-[5px] h-[39px] w-[170px] border border-blue-300 shadow text-[17px] ">Login</button>

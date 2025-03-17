@@ -19,16 +19,16 @@ const Footer = () => {
 
         <div className="flex gap-[5px]">
           <div className="border border-white h-[40px] w-[40px] rounded-[40px] flex justify-center items-center p-[11px]">
-            <img src={facebook_icon} alt="" />
+            <img src={facebook_icon} alt="/" />
           </div>
           <div className="border border-white h-[40px] w-[40px] rounded-[40px] flex justify-center items-center p-[11px]">
-            <img src={twitter_icon} alt="" />
+            <img src={twitter_icon} alt="/" />
           </div>
           <div className="border border-white h-[40px] w-[40px] rounded-[40px] flex justify-center items-center p-[11px]">
-            <img src={cloud_icon} alt="" />
+            <img src={cloud_icon} alt="/" />
           </div>
           <div className="border border-white h-[40px] w-[40px] rounded-[40px] flex justify-center items-center p-[11px]">
-            <img src={instagram_icon} alt="" />
+            <img src={instagram_icon} alt="/" />
           </div>
         </div>
       </div>

@@ -107,7 +107,7 @@ const Gallery = () => {
                       onClick={() => setShowEditModal(items._id)}
                       className="h-6 w-6 z-[9] "
                       src={edit_icon}
-                      alt=""
+                      alt="/"
                     />
                   </div>
                 )}

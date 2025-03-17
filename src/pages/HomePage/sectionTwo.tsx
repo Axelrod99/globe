@@ -31,7 +31,7 @@ const SectionTwo = () => {
             </p>
 
             <div className="bg-white h-6 w-6 flex justify-center items-center">
-              <img className="h-7 w-7" src={arrow} alt="" />
+              <img className="h-7 w-7" src={arrow} alt="/" />
             </div>
           </div>
           <hr className="w-full my-[20px]" />

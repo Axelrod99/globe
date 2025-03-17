@@ -18,7 +18,7 @@ const SectionTwo = () => {
             key={i}
             src={items.img}
             className="w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow transition-transform transition-shadow duration-300 ease-in-out hover:scale-105 hover:shadow-lg cursor-pointer"
-            alt=""
+            alt="/"
           />
         ))}
       </div>

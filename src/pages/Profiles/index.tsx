@@ -29,7 +29,7 @@ const Profiles = () => {
     <>
       <div ref={homes} className="flex flex-col mb-32">
         <div className="flex items-center h-[90px] px-[20px] sm:px-[40px] bg-white justify-between">
-          <img className="h-[70px] w-[70px]" src={logo} alt="" />
+          <img className="h-[70px] w-[70px]" src={logo} alt="/" />
         </div>
         <div className="mt-10 flex flex-col gap-8 items-center px-[10px] xs:px-[20px] sm:px-[40px]">
           <div className="flex flex-col w-full">
@@ -38,7 +38,7 @@ const Profiles = () => {
                 onClick={() => navigate(-1)}
                 className="cursor-pointer h-[30px] w-[30px] bg-black rounded-[40px] flex justify-center items-center "
               >
-                <img src={arrow} alt="" />
+                <img src={arrow} alt="/" />
               </div>
             </div>
 

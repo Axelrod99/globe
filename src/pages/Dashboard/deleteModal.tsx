@@ -25,7 +25,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({
 
   return (
     <div className="flex flex-col gap-3 justify-center items-center w-[498px] text-center bg-white border shadow rounded-[16px] p-5">
-      <img src={trash} alt="" />
+      <img src={trash} alt="/" />
       <p className="font-semibold text-[24px] text-[#191919]">
         Delete this Post
       </p>

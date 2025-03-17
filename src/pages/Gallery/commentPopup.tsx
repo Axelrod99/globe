@@ -76,7 +76,7 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
   return (
     <div className="relative rounded-[4px] w-[95%] md:w-[90%] overflow-y-scroll h-[90%] md:h-[80vh] lg:h-[90vh] shadow-sm bg-white text-black flex flex-col md:flex-row">
       <div className="flex flex-col w-full border-r">
-        <img src={parentItem?.image} className="h-full w-full" alt="" />
+        <img src={parentItem?.image} className="h-full w-full" alt="/" />
 
         <div className="px-2 border-t border-t-[#acacac] w-full md:hidden flex gap-1 py-7">
           <input
@@ -92,7 +92,7 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
               onClick={handleSend}
               className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
             >
-              {loading ? "..." : <img src={send} alt="" />}
+              {loading ? "..." : <img src={send} alt="/" />}
             </button>
           </div>
         </div>
@@ -116,7 +116,7 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
               onClick={handleSend}
               className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
             >
-              {loading ? "..." : <img src={send} alt="" />}
+              {loading ? "..." : <img src={send} alt="/" />}
             </button>
           </div>
         </div> */}
@@ -124,7 +124,7 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
         <>
           {loadingComment ? (
             <div className="h-[60px] flex justify-center items-center">
-              <img src={loadingIcon} alt="" />
+              <img src={loadingIcon} alt="/" />
             </div>
           ) : (
             <>
@@ -165,7 +165,7 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
               onClick={handleSend}
               className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
             >
-              {loading ? "..." : <img src={send} alt="" />}
+              {loading ? "..." : <img src={send} alt="/" />}
             </button>
           </div>
         </div>
@@ -180,7 +180,7 @@ im
           onClick={handleBack}
           src={arrow}
           className="cursor-pointer"
-          alt=""
+          alt="/"
         />
       </div>
     </div>
