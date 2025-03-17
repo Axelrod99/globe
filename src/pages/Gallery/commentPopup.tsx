@@ -14,7 +14,6 @@ type CommentProps = {
 
 const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
   const emailss = localStorage.getItem("glais40LoggedInEmail");
-  // const emailss222 = localStorage.getItem("glais40LoggedInEmail");
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingComment, setLoadingComment] = useState(false);
