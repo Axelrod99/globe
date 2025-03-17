@@ -1,11 +1,12 @@
 import React from "react";
+import circle_icon from "../../assets/img/Tagline@3x.png";
 
 const SectionOne = () => {
   return (
     <div className=" gap-16 flex w-full px-[15px] xs:px-[20px] sm:px-[30px]  bg-[#f2f0f0] text-[#6d6f72] krona-one py-[80px]">
-      <div className="hidden md:flex max-w-[350px] justify-center">
-          <div className="w-[320px] h-[320px] shadow border-8 rounded-[347px] bg-gray-400" />
-        </div>
+      <div className="hidden lg:flex max-w-[350px] justify-center">
+        <img src={circle_icon} className=" rounded-[607px] " />
+      </div>
       <div className="flex flex-col justify-center gap-3 w-full">
         <p className="text-[13px]">THE MAIN EVENT</p>
         <p className="text-[22px] xs:text-[28px] sm:text-[30px] w-full md:w-[75%] lg:w-[65%]">

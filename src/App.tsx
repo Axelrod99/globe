@@ -6,12 +6,14 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Signup from "./pages/Auth/signup";
 import Dashboard from "./pages/Dashboard";
+import Profiles from "./pages/Profiles";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Profiles" element={<Profiles />} />
         <Route path="/Admin-SignUp" element={<Signup />} />
         <Route path="/About" element={<About />} />
         <Route path="/Gallery" element={<Gallery />} />

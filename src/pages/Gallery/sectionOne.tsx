@@ -26,7 +26,6 @@ const SectionOne = () => {
     setInterval(autoScroll, 1000);
   }, []);
 
-
   const handleShowMore = (items: any) => {
     handleHomes();
     setShowGallery(items);
@@ -49,7 +48,6 @@ const SectionOne = () => {
     }
   };
 
-
   return (
     <div ref={homes}>
       {showGallery ? (
@@ -71,14 +69,14 @@ const SectionOne = () => {
           </div>
 
           <div className="absolute bottom-0 bg-[#a5f1a2]">
-        <div className="whitespace-nowrap flex gap-5 animate-scroll-x bg-[#a5f1a2] text-[#333]">
-          {textList.map((items, i) => (
-            <div key={i} className="scroll-content relative bg-[#a5f1a2]">
-              <p className="text-[20px] bg-[#a5f1a2] py-1">{items.name}</p>
+            <div className="whitespace-nowrap flex gap-5 animate-scroll-x bg-[#a5f1a2] text-[#333]">
+              {textList.map((items, i) => (
+                <div key={i} className="scroll-content relative bg-[#a5f1a2]">
+                  <p className="text-[20px] bg-[#a5f1a2] py-1">{items.name}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
         </div>
       )}
     </div>

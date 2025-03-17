@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={homes}  className="Axiforma flex flex-col">
+    <div ref={homes} className="Axiforma flex flex-col">
       {/* <Header/> */}
       <main>{children}</main>
       <div>

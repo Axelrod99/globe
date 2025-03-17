@@ -91,6 +91,7 @@ const Signup = () => {
             localStorage.setItem("password", "");
             localStorage.setItem("authToken", "");
             localStorage.setItem("glais40Email", email);
+            localStorage.setItem("glais40EmailAdmin", email);
             localStorage.setItem(
               "glais40VerificationToken",
               response.data.data.VerificationToken
@@ -136,6 +137,7 @@ const Signup = () => {
         if (response.status === 200) {
           setAccessToken(response.data.token);
           localStorage.setItem("glais40Email", email);
+          localStorage.setItem("glais40EmailAdmin", email);
           localStorage.setItem(
             "glais40VerificationToken",
             response.data.data.VerificationToken

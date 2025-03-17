@@ -4,6 +4,7 @@ import Banner from "./banner";
 import SectionOne from "./sectionOne";
 import SectionTwo from "./sectionTwo";
 import SectionThree from "./sectionThree";
+import SectionFive from "../HomePage/sectionFive";
 
 const About = () => {
   return (
@@ -11,7 +12,8 @@ const About = () => {
       <Banner />
       <SectionOne />
       <SectionTwo />
-      <SectionThree />
+      {/* <SectionThree /> */}
+      <SectionFive/>
     </Layout>
   );
 };

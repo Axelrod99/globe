@@ -5,7 +5,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const SectionFour = () => {
-  // console.log(localStorage);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +19,7 @@ const SectionFour = () => {
     token6: "",
   });
 
-  const emailss = localStorage.getItem("glais40Email");
+  const loggedEmail = localStorage.getItem("glais40LoggedInEmail");
 
   const [currentInputIndex, setCurrentInputIndex] = useState(0);
 
@@ -54,10 +53,9 @@ const SectionFour = () => {
 
     axios
       .post(`${process.env.REACT_APP_API_URL}/auth/Register`, newUserData)
-
       .then((response) => {
         if (response.status === 200) {
-          localStorage.setItem("glais40Email", email);
+          localStorage.setItem("glais40LoggedOutEmail", email);
           localStorage.setItem(
             "glais40VerificationToken",
             response.data.data.VerificationToken
@@ -84,22 +82,48 @@ const SectionFour = () => {
     setIsLoading(true);
 
     const verificationCode = localStorage.getItem("glais40VerificationToken");
-    const emailss = localStorage.getItem("glais40Email");
+    const emailss = localStorage.getItem("glais40LoggedOutEmail");
+    localStorage.setItem("glais40LoggedInEmail", email);
 
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    const newUserData = {
+      email: emailss,
+    };
+
+    // console.log(verificationCode, emailss, allTokens)
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     if (verificationCode === allTokens) {
-      setShowPopup(false);
-      setParentEmail(emailss);
-      localStorage.setItem("glais40VerificationToken", "");
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/auth/save`, newUserData)
+        .then((response) => {
+          if (response.status === 200) {
+            setShowPopup(false);
+            setParentEmail(emailss);
+            localStorage.setItem("glais40VerificationToken", "");
+            localStorage.setItem("glais40LoggedOutEmail", "");
+            setShowPopup(false);
+          }
+        })
+        .catch(({ error, response }) => {
+          if (!response) {
+            toast("Please check internet connection", {
+              position: "top-right",
+            });
+            setIsLoading(false);
+          } else {
+            toast.error(response.data.message, {
+              position: "top-right",
+            });
+          }
+        });
     }
   };
 
   useEffect(() => {
-    if (emailss !== null) {
-      setParentEmail(emailss);
+    if (loggedEmail !== null) {
+      setParentEmail(loggedEmail);
     }
-  }, [emailss]);
+  }, [loggedEmail]);
 
   return (
     <div className="py-[90px] flex flex-col gap-[150px] bg-[#F8F8F8]">
@@ -114,7 +138,7 @@ const SectionFour = () => {
           </div>
 
           <div className="absolute left-0 right-0 top-0 bottom-72 text-[65px] sm:text-[90px] md:text-[110px] lg:text-[130px] xl:text-[145px] text-[#6d6f7294] opacity-10 flex justify-center krona-one">
-            NEWSLETTER
+            REGISTER
           </div>
         </div>
       ) : (
@@ -139,7 +163,7 @@ const SectionFour = () => {
                     alt=""
                   />
                 </span>
-                Subscribe
+                {loading ? "Loading..." : "Subscribe"}
               </button>
             </div>
 
@@ -157,7 +181,7 @@ const SectionFour = () => {
           </div>
 
           <div className="absolute left-0 right-0 top-0 bottom-72 text-[65px] sm:text-[90px] md:text-[110px] lg:text-[130px] xl:text-[145px] text-[#6d6f7294] opacity-10 flex justify-center krona-one">
-            NEWSLETTER
+            REGISTER
           </div>
 
           {showPopup && (
@@ -165,7 +189,10 @@ const SectionFour = () => {
               <div className="flex flex-col gap-3">
                 <div className="flex justify-end">
                   <div
-                    onClick={() => setShowPopup(false)}
+                    onClick={() => {
+                      setShowPopup(false);
+                      setLoading(false);
+                    }}
                     className="h-[40px] w-[40px] cursor-pointer shadow Krona-one bg-white rounded-[40px] flex justify-center items-center font-semibold text-[24px]"
                   >
                     x
@@ -194,9 +221,9 @@ const SectionFour = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={handleCheck}
-                    className="h-[35px] w-[100px] rounded-[5px] shadow bg-[#9bf9b3] text-white mt-2"
+                    className="h-[35px] w-[100px] hover:bg-blue-200 rounded-[5px] shadow bg-[#9bf9b3] text-white mt-2"
                   >
-                    Submit
+                    {isLoading ? "Loading..." : "Submit"}
                   </button>
                 </div>
               </div>
@@ -208,9 +235,12 @@ const SectionFour = () => {
       )}
 
       <div className="px-[10px] xs:px-[20px] sm:px-[30px] flex flex-col md:flex-row gap-7">
-        <div className="min-w-[330px] bg-[#333] h-[480px]" />
-
-        <div className="bg-[#585656] h-[480px] w-full" />
+        <video height="h-[480px]" width="100%" controls>
+          <source
+            src="/"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </div>
   );

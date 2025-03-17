@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import dropdown from "../../assets/icons/dropdown.svg";
 import { textList } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
+import logo from '../../assets/icons/logo.png'
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const Banner = () => {
         onClick={() => navigate("/")}
         className="Axiforma-semibold absolute top-4 sm:top-7 left-6 sm:left-10 text-[20px] xs:text-[28px] cursor-pointer"
       >
-        glais40
+        <img className="h-[80px] w-[80px]" src={logo} alt="" />
       </p>
     </div>
   );

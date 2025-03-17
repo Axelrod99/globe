@@ -1,9 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { textList } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
+import circle_icon from "../../assets/img/Tagline@3x.png";
+import AxiosInstance from "../../api/axios";
 
 const SectionThree = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [parentCategories, setParentCategories] = useState([] as any);
+  // const [activeTab, setActiveTab] = useState(parentCategories[0].category);
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -12,7 +17,7 @@ const SectionThree = () => {
 
     if (scrollContainer) {
       const intervalId = setInterval(() => {
-        scrollContainer.scrollLeft += 1;
+        scrollContainer.scrollLeft += 0.5; 
 
         if (
           scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
@@ -20,17 +25,36 @@ const SectionThree = () => {
         ) {
           scrollContainer.scrollLeft = 0;
         }
-      }, 10);
+      }, 20); // Increased delay for slower scrolling
 
       return () => clearInterval(intervalId);
     }
   }, []);
 
+  const fetchCategories = async () => {
+    try {
+      setLoading(true);
+      const res = await AxiosInstance.get(`/category/all`);
+      // console.log(res.data)
+      setParentCategories(res.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const handleGalleryClick = (items: any) => {
+    navigate("/Gallery", { state: { parentCategories: items } });
+  };
+
   return (
     <div className="flex flex-col gap-[90px] bg-[#cccdcd] text-white krona-one py-[80px]">
       <div className=" gap-16 flex w-full px-[10px] xs:px-[20px] sm:px-[30px]">
-        <div className="hidden md:flex max-w-[350px] justify-center">
-          <div className="w-[320px] h-[320px] shadow border-8 rounded-[347px] bg-gray-400" />
+        <div className="hidden lg:flex max-w-[350px] justify-center">
+          <img src={circle_icon} className=" rounded-[607px] " />
         </div>
         <div className="flex flex-col justify-center gap-3 w-full">
           <p className="text-[13px]">THE MAIN EVENT</p>
@@ -57,12 +81,19 @@ const SectionThree = () => {
         <div
           ref={scrollContainerRef}
           id="scroll-image"
+          style={{ overflowX: "auto", whiteSpace: "nowrap" }}
           className="scroll-container whitespace-nowrap flex gap-[40px]"
         >
-          {textList.map((items, i) => (
-            <div className="scroll-content relative">
+          {parentCategories.map((items: any, i: number) => (
+            <div
+              onClick={() => handleGalleryClick(items)}
+              className="cursor-pointer scroll-content relative"
+            >
               <div className="flex items-center gap-5">
-                <div className="min-w-[380px] xs:min-w-[420px] sm:min-w-[536px] h-[295px] bg-gray-50 gap-9"></div>
+                <img
+                  src={items.image}
+                  className="min-w-[380px] xs:min-w-[420px] sm:min-w-[536px] h-[295px] bg-gray-50 gap-9"
+                />
               </div>
             </div>
           ))}

@@ -1,18 +1,29 @@
-import React from 'react'
+import React from "react";
+import { imgArray, imgArray2, ministers } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
 
 const SectionTwo = () => {
-  return (
-    <div className='px-[15px] xs:px-[20px] sm:px-[40px] py-[90px] bg-white grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-4 sm:gap-y-0'>
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-yellow-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-gray-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-teal-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-blue-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-red-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-purple-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-indigo-100' />
-        <div className='w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow bg-orange-100' />
-    </div>
-  )
-}
+  const navigate = useNavigate();
 
-export default SectionTwo
+  const handleProfileClick = (items: any) => {
+    navigate("/Profiles", { state: { minister: items } });
+  };
+
+  return (
+    <div className="flex flex-col gap-20">
+      <div className="px-[15px] xs:px-[20px] sm:px-[40px] py-[90px] bg-white grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-4 sm:gap-y-0">
+        {ministers.map((items, i) => (
+          <img
+          onClick={() => handleProfileClick(items)}
+            key={i}
+            src={items.img}
+            className="w-full xl:w-[323px] h-[420px] sm:h-[400px] md:h-[510px] lg:h-[585px] xl:h-[323px] shadow transition-transform transition-shadow duration-300 ease-in-out hover:scale-105 hover:shadow-lg cursor-pointer"
+            alt=""
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SectionTwo;

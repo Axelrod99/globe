@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <Layout>
       <Banner />
-      <SectionOne />
+      {/* <SectionOne /> */}
       <SectionTwo />
       <SectionThree />
       <SectionFour />

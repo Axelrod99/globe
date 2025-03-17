@@ -6,6 +6,7 @@ import AxiosInstance from "../../api/axios";
 import delete_icon from "../../assets/icons/icons8-delete-60.png";
 import loadingIcon from "../../assets/icons/loading-icon.gif";
 import DeleteModal from "../Dashboard/deleteModal";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type GalleryProps = {
   handleBack?: () => void;
@@ -13,27 +14,19 @@ type GalleryProps = {
 };
 
 const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
+  const navigate = useNavigate();
   const [showComments, setShowComments] = useState(null);
   const [loading, setLoading] = useState(false);
   const [parentItems, setParentItems] = useState([] as any);
   const [showDelete, setShowDelete] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState<any>(null);
+  const location = useLocation();
+  const parentCategories = location.state?.parentCategories;
 
-  const fetchPost = async () => {
-    try {
-      setLoading(true);
-      const res = await AxiosInstance.get(`/post/all`);
-      setParentItems(res.data);
-      // console.log(res.data);
-      setLoading(false);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   const reloadPost = async () => {
     try {
-      const res = await AxiosInstance.get(`/post/all`);
+      const res = await AxiosInstance.get(`/category/${parentCategories.category}`);
       setParentItems(res.data);
     } catch (error) {
       console.error(error);
@@ -41,7 +34,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
   };
 
   useEffect(() => {
-    fetchPost();
+    getCategory()
   }, []);
 
   const closeComment = () => {
@@ -49,9 +42,20 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
     reloadPost();
   };
 
-  const handleDeleteBack =() => {
-    setShowDeleteModal(null)
-    reloadPost()
+  const handleDeleteBack = () => {
+    setShowDeleteModal(null);
+    reloadPost();
+  };
+
+  const getCategory = async () => {
+    try {
+      const res = await AxiosInstance.get(`/category/${parentCategories.category}`);
+      setParentItems(res.data);
+
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
   return (
@@ -64,12 +68,12 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
         <div className="flex flex-col gap-10 bg-[#F8F8F8] px-[10px] xs:px-[20px] sm:px-[40px] py-[80px] krona-one">
           <div className="flex gap-2 items-center pr-5 cursor-pointer">
             <div
-              onClick={handleBack}
+              onClick={() => navigate("/")}
               className="cursor-pointer h-[30px] w-[30px] bg-black rounded-[40px] flex justify-center items-center "
             >
               <img src={arrow} alt="" />
             </div>
-            <p className="text-[25px]">{`${parentItem.name} memories`}</p>
+            <p className="text-[25px]">{`${parentCategories.category} memories`}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-5">
@@ -111,7 +115,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
                   </div>
                 </div>
 
-                {showDelete === items._id && (
+                {/* {showDelete === items._id && (
                   <div key={i} className="absolute top-2 right-2">
                     <img
                       onClick={() => setShowDeleteModal(items._id)}
@@ -120,7 +124,7 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
                       alt=""
                     />
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </div>
