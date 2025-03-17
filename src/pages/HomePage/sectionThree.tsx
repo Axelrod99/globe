@@ -70,7 +70,7 @@ const SectionThree = () => {
           </p>
           <button
             onClick={() => navigate("/About")}
-            className="mt-5 text-[#11131A] bg-[#9bf9b3] w-[200px] h-[50px] shadow border text-[17px]"
+            className="mt-5 text-white bg-[#eec48a] w-[200px] h-[50px] shadow border text-[17px]"
           >
             Event Info
           </button>
@@ -92,7 +92,7 @@ const SectionThree = () => {
               <div className="flex items-center gap-5">
                 <img
                   src={items.image}
-                  className="min-w-[380px] xs:min-w-[420px] sm:min-w-[536px] h-[295px] bg-gray-50 gap-9"
+                  className="min-w-[380px] xs:min-w-[420px] sm:min-w-[536px] h-[295px] gap-9"
                 />
               </div>
             </div>

@@ -4,7 +4,7 @@ import sectionImg from '../../assets/img/leaders.png'
 const SectionSix = () => {
   return (
     <div className="flex w-full">
-      <div className="hidden md:flex w-full bg-[#f1ff4f] justify-center items-center">
+      <div className="hidden md:flex w-full bg-[#eec48a] justify-center items-center">
         <img src={sectionImg} className="h-[500px] bg-gray-500" />
       </div>
       <div className=" krona-one flex w-full bg-[#11131A] text-white flex-col items-center text-start py-[80px]">

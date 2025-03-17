@@ -48,8 +48,10 @@ const DashboardAnnuaImgs: FC<GalleryProps> = ({ parentItem, handleBack }) => {
 
   const getCategory = async () => {
     try {
+      setLoading(true)
       const res = await AxiosInstance.get(`/category/${parentItem}`);
       setParentItems(res.data);
+      setLoading(false)
     } catch (error) {
       console.error(error);
     }

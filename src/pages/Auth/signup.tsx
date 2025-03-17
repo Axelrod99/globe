@@ -65,6 +65,7 @@ const Signup = () => {
             toast.error(response.data.message, {
               position: "top-right",
             });
+            setIsLoading(false)
           }
         });
     }, 2000);

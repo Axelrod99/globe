@@ -13,7 +13,8 @@ type CommentProps = {
 };
 
 const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
-  const emailss = localStorage.getItem("glais40Email");
+  const emailss = localStorage.getItem("glais40LoggedInEmail");
+  // const emailss222 = localStorage.getItem("glais40LoggedInEmail");
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingComment, setLoadingComment] = useState(false);
@@ -26,8 +27,6 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
 
     return `${day}/${month}/${year}`;
   };
-
-  // console.log(parentItem);
 
   const handleSend = () => {
     if (emailss !== null) {
@@ -151,24 +150,28 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
           )}
         </>
 
-        <div className="px-2 border-t border-t-[#acacac] absolute bottom-0 w-full hidden md:flex gap-1 py-1">
-          <input
-            className="h-[43px] w-full border-b-2"
-            placeholder="Add a comment here..."
-            type="text"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          />
-          <div className="w-[47px] flex justify-center">
-            <button
-              disabled={!comment}
-              onClick={handleSend}
-              className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
-            >
-              {loading ? "..." : <img src={send} alt="/" />}
-            </button>
+        {emailss !== null ? (
+          <div className="px-2 border-t border-t-[#acacac] absolute bottom-0 w-full hidden md:flex gap-1 py-1">
+            <input
+              className="h-[43px] w-full border-b-2"
+              placeholder="Add a comment here..."
+              type="text"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            />
+            <div className="w-[47px] flex justify-center">
+              <button
+                disabled={!comment}
+                onClick={handleSend}
+                className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
+              >
+                {loading ? "..." : <img src={send} alt="/" />}
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
 
       {/* <div className="absolute rounded-[50px] text-[20px] krona-one right-3 top-3 h-[35px] w-[35px] flex justify-center items-start border shadow">

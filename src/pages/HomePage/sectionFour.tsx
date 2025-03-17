@@ -163,11 +163,11 @@ const SectionFour = () => {
                     alt="/"
                   />
                 </span>
-                {loading ? "Loading..." : "Subscribe"}
+                {loading ? "Loading..." : "Register"}
               </button>
             </div>
 
-            <div className="flex z-[9]">
+            {/* <div className="flex z-[9]">
               <div className="flex items-center gap-[13px]">
                 <input type="checkbox" />
                 <p className="mt-1">
@@ -177,7 +177,7 @@ const SectionFour = () => {
                   </span>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="absolute left-0 right-0 top-0 bottom-72 text-[65px] sm:text-[90px] md:text-[110px] lg:text-[130px] xl:text-[145px] text-[#6d6f7294] opacity-10 flex justify-center krona-one">
@@ -207,7 +207,7 @@ const SectionFour = () => {
                         name={`token${i}`}
                         value={tokens[`token${i}`]}
                         onChange={handleChange}
-                        className="text-black flex justify-center p-[10px] items-center text-[24px] outfit-semibold w-[80px] h-[80px] border-2 rounded-[4px] border-black bg-white"
+                        className="text-black flex justify-center p-[10px] items-center text-[24px] outfit-semibold w-[40px] xs:w-[60px] md:w-[80px] h-[40px] xs:h-[60px] md:h-[80px] border-2 rounded-[4px] border-black bg-white"
                         ref={(el) => {
                           if (el) {
                             inputRefs.current[i - 1] = el;

@@ -30,7 +30,7 @@ const SectionTwo = () => {
               <span className="text-[16px] text-[#9d9ea1]">/{items.title}</span>
             </p>
 
-            <div className="bg-white h-6 w-6 flex justify-center items-center">
+            <div className="bg-white h-6 min-w-7 xs:w-6 flex justify-center items-center">
               <img className="h-7 w-7" src={arrow} alt="/" />
             </div>
           </div>

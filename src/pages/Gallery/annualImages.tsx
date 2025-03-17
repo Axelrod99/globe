@@ -49,9 +49,10 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
 
   const getCategory = async () => {
     try {
+      setLoading(true)
       const res = await AxiosInstance.get(`/category/${parentCategories.category}`);
       setParentItems(res.data);
-
+      setLoading(false)
     } catch (error) {
       console.error(error);
     }
@@ -68,12 +69,12 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
         <div className="flex flex-col gap-10 bg-[#F8F8F8] px-[10px] xs:px-[20px] sm:px-[40px] py-[80px] krona-one">
           <div className="flex gap-2 items-center pr-5 cursor-pointer">
             <div
-              onClick={() => navigate("/")}
+              onClick={() => navigate(-1)}
               className="cursor-pointer h-[30px] w-[30px] bg-black rounded-[40px] flex justify-center items-center "
             >
               <img src={arrow} alt="/" />
             </div>
-            <p className="text-[25px]">{`${parentCategories.category} memories`}</p>
+            <p className="text-[25px]">{`${parentCategories?.category} memories`}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-5">
