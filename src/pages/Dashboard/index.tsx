@@ -109,7 +109,7 @@ const Dashboard = () => {
             </button>
           </div>
 
-          <div className="flex px-[20px] sm:px-[40px] krona-one mt-5 gap-7 ">
+          <div className="flex px-[20px] sm:px-[40px] krona-one mt-5 gap-4 xs:gap-7 text-[14px] xs:text-[16px]">
             {dashboardNav.map((items) => (
               <p
                 onClick={() => {
