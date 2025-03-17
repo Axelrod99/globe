@@ -21,8 +21,7 @@ const DashboardAnnuaImgs: FC<GalleryProps> = ({ parentItem, handleBack }) => {
   const [parentItems, setParentItems] = useState([] as any);
   const [showDelete, setShowDelete] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState<any>(null);
-  const location = useLocation();
-  const parentCategories = location.state?.parentCategories;
+
 
   const reloadPost = async () => {
     try {
