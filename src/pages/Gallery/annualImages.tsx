@@ -70,11 +70,11 @@ const AnnualImages: FC<GalleryProps> = ({ parentItem, handleBack }) => {
           <div className="flex gap-2 items-center pr-5 cursor-pointer">
             <div
               onClick={() => navigate(-1)}
-              className="cursor-pointer h-[30px] w-[30px] bg-black rounded-[40px] flex justify-center items-center "
+              className="cursor-pointer h-[27px] xs:h-[30px] w-[27px] xs:w-[30px] bg-black rounded-[40px] flex justify-center items-center "
             >
               <img src={arrow} alt="/" />
             </div>
-            <p className="text-[25px]">{`${parentCategories?.category} memories`}</p>
+            <p className="text-[17px] xs:text-[22px] sm:text-[25px]">{`${parentCategories?.category} memories`}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-5">

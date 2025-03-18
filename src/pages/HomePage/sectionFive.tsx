@@ -6,7 +6,7 @@ const SectionFive = () => {
   return (
     <div className="krona-one py-[90px] px-[10px] xs:px-[20px] sm:px-[30px] flex flex-col">
       <p className="text-[13px]">CALENDER</p>
-      <div className="text-[35px] flex justify-between items-center">
+      <div className="text-[28px] w-[75%] xs:w-full xs:text-[35px] flex justify-between items-center">
         <p>EVENT SCHEDULE</p>
         {/* <p className="text-[14px]">View More</p> */}
       </div>

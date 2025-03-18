@@ -8,11 +8,11 @@ const SectionSix = () => {
         <img src={sectionImg} className="h-[500px] bg-gray-500" />
       </div>
       <div className=" krona-one flex w-full bg-[#11131A] text-white flex-col items-center text-start py-[80px]">
-        <div className="flex flex-col max-w-[90%] sm:max-w-[80%] md:max-w-[333px]">
+        <div className="flex flex-col gap-2 xs:gap-0 max-w-[90%] sm:max-w-[80%] md:max-w-[333px]">
           <p className="text-[13px]">WHO WE ARE</p>
           <div className="flex flex-col gap-[20px]">
-            <p className="text-[35px]">GUIDING LIGHT ASSEMBLY</p>
-            <p className="text-[17px]">
+            <p className="text-[25px] xs:text-[30px] sm:text-[35px]">GUIDING LIGHT ASSEMBLY</p>
+            <p className="text-[14px] xs:text-[16px]">
               Guiding Light Assembly is a Christ-centered church dedicated to
               discipleship, leadership development, and community
               transformation. For 40 years, GLA has been a place where faith

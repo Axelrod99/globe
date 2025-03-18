@@ -3,6 +3,8 @@ import envlope_icon from "../../assets/icons/envelope.png";
 import envelope_purple from "../../assets/icons/purple-envelope.png";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { linkArray } from "../../utils/data";
+import YouTube from "react-youtube";
 
 const SectionFour = () => {
   const [email, setEmail] = useState("");
@@ -125,13 +127,38 @@ const SectionFour = () => {
     }
   }, [loggedEmail]);
 
+  const [selectedItem, setSelectedItem] = useState<any | null>(null);
+
+  useEffect(() => {
+    if (linkArray.length > 0) {
+      setSelectedItem(linkArray[0]);
+    }
+  }, [linkArray]);
+
+  const handleItemClick = (item: any) => {
+    setSelectedItem(item);
+  };
+
+  const opts = {
+    height: "480",
+    width: "100%",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const onReady = (event: any) => {
+    // Access to player in all event handlers via event.target
+    // event.target.pauseVideo();
+  };
+
   return (
     <div className="py-[90px] flex flex-col gap-[150px] bg-[#F8F8F8]">
       {showParentEmail ? (
         <div className="relative flex flex-col gap-[24px] w-full items-center">
-          <div className="flex flex-col gap-6 items-start w-[75%]">
+          <div className="flex flex-col gap-6 items-center xs:items-start w-[95%] xs:w-[75%]">
             <div className="z-[9] flex justify-between w-fit border-b-2 border-[#6d6f72]">
-              <p className="text-[32px] outfit-semibold text-[#6d6f72]">
+              <p className="text-[20px] xs:text-[28px] sm:text-[32px] outfit-semibold text-[#6d6f72]">
                 {showParentEmail}
               </p>
             </div>
@@ -234,13 +261,22 @@ const SectionFour = () => {
         </div>
       )}
 
-      <div className="px-[10px] xs:px-[20px] sm:px-[30px] flex flex-col md:flex-row gap-7">
-        <video height="h-[480px]" width="100%" controls>
-          <source
-            src="/"
-            type="video/mp4"
-          />
-        </video>
+      <div className="px-[10px] xs:px-[20px] sm:px-[30px] flex flex-col gap-7 justify-center items-center">
+        {selectedItem && (
+          <div className="w-full">
+            <YouTube videoId={selectedItem.url} opts={opts} onReady={onReady} />
+          </div>
+        )}
+
+        <div className="flex gap-3">
+          {linkArray.map((items) => (
+            <div
+              onClick={() => handleItemClick(items)}
+              key={items.url}
+              className="cursor-pointer h-2 w-4 rounded-[20px] bg-[#13243a]"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

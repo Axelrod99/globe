@@ -23,11 +23,11 @@ const SectionTwo = () => {
         <div key={i} className="flex flex-col">
           <div
             onClick={() => handleProfileClick(items)}
-            className="flex justify-between items-center cursor-pointer"
+            className="flex gap-1 justify-between items-center cursor-pointer"
           >
-            <p className="text-[25px]">
+            <p className="text-[20px] xs:text-[25px]">
               {items.name}{" "}
-              <span className="text-[16px] text-[#9d9ea1]">/{items.title}</span>
+              <span className="text-[14px] xs:text-[16px] text-[#9d9ea1]">/{items.title}</span>
             </p>
 
             <div className="bg-white h-6 min-w-7 xs:w-6 flex justify-center items-center">

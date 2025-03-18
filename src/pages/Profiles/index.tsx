@@ -32,7 +32,7 @@ const Profiles = () => {
           <img className="h-[70px] w-[70px]" src={logo} alt="/" />
         </div>
         <div className="mt-10 flex flex-col gap-8 items-center px-[10px] xs:px-[20px] sm:px-[40px]">
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full gap-3">
             <div className="flex justify-start w-full">
               <div
                 onClick={() => navigate(-1)}
@@ -43,7 +43,7 @@ const Profiles = () => {
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="krona-one text-[40px]">{minister?.name}</p>
+              <p className="krona-one text-[18px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] text-center">{minister?.profile_name}</p>
               <p className="Axiforma-bold text-[18px] text-[#6d6f72]">
                 {minister?.title}
               </p>

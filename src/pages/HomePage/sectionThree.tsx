@@ -58,10 +58,10 @@ const SectionThree = () => {
         </div>
         <div className="flex flex-col justify-center gap-3 w-full">
           <p className="text-[13px]">THE MAIN EVENT</p>
-          <p className="text-[30px] w-full md:w-[75%] lg:w-[65%]">
+          <p className="text-[25px] xs:text-[30px] w-full md:w-[75%] lg:w-[65%]">
             A CALL TO CELEBRATE AND LOOK AHEAD
           </p>
-          <p>
+          <p className="text-[14px] xs:text-[16px]">
             GLA invites members, past and present, as well as the wider
             community, to join in this celebration of faith, unity, and impact.
             As we look back in gratitude, we also look ahead with renewed
