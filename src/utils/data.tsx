@@ -15,6 +15,7 @@ import img14 from "../assets/img/14.png";
 import img15 from "../assets/img/15.png";
 import img16 from "../assets/img/16.png";
 import img17 from "../assets/img/17.png";
+import img18 from "../assets/img/18.png"
 
 export const textList = [
   { name: "GLA IS 40 CELEBRATE WITH US" },
@@ -173,7 +174,7 @@ export const ministers = [
     name: "ANNATORIA",
     title: "Ministering",
     bio: "With the release of her second album, Blessing Annatoria Chitapa—known professionally as Annatoria—continues her impressive ascent in the music world. This R&B gospel artist, who infuses her sound with vibrant Afrobeat influences, has captured widespread attention with her captivating musical style. Born in Harare, Zimbabwe and relocating to Dudley in England's West Midlands at age seven, Annatoria's foundation was built in the church, where she developed her deep faith and relationship with Jesus Christ. Music provided essential direction during her formative teenage years. 'I grew up on a lot of gospel music, from powerful musicians such as Tasha Cobbs, Donnie McClurkin and Kierra Sheard,' she explains. 'These musicians inspired me to use my gift as a vocal piece for the good news. Singing hymns also played a big part in moulding me to be the singer and person that I am today.' Her breakthrough came in 2020 when she entered The Voice UK. Her remarkable performances of R&B and pop standards culminated in winning the prestigious competition and securing a contract with Island Records. On March 12, 2021, they released her powerful interpretation of Kirk Franklin's 'I Smile,' followed in April by her debut album 'Count My Blessings,' which features a truly uplifting rendition of the worship anthem 'In Christ Alone.'Now, her single 'Stay With Me' further solidifies her position in the industry, demonstrating that artists emerging from the British Church can equal or surpass the quality of performers on the international music scene.",
-    img: img13,
+    img: img18,
   },
   {
     name: "IBUKUN AWOSIKA",
