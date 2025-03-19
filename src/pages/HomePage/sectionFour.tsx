@@ -273,7 +273,9 @@ const SectionFour = () => {
             <div
               onClick={() => handleItemClick(items)}
               key={items.url}
-              className="cursor-pointer h-2 w-4 rounded-[20px] bg-[#13243a]"
+              className={`cursor-pointer h-2 w-4 rounded-[20px] ${
+                selectedItem && selectedItem.url === items.url ? 'bg-[#eec48a]' : 'bg-[#13243a]'
+              }`}
             />
           ))}
         </div>

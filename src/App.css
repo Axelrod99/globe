@@ -127,3 +127,10 @@ html {
     transform: translateX(-20%); /* Scroll to the end of the first half */
   }
 }
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}

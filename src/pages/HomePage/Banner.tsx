@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AxiosInstance from "../../api/axios";
 import Countdown from "../../components/CountDown";
 import { textList } from "../../utils/data";
-import banner_img from "../../assets/img/Header Title.png";
+import banner_img from "../../assets/img/header.png";
 import banner40 from "../../assets/icons/banner40Star.png";
 
 const Banner = () => {
@@ -37,7 +37,7 @@ const Banner = () => {
   const targetDate = new Date("2025-03-26T00:00:00");
 
   return (
-    <div className="pb-7 border-[#e99827] border-b-[10px] wallpaper pt-28 flex flex-col items-center ">
+    <div className="pb-7 border-[#e99827] border-b-[10px] wallpaper pt-44 flex flex-col items-center ">
       <div>
         <img className="h-[130px] w-[130px]" src={logo} alt="/" />
       </div>
@@ -49,7 +49,7 @@ const Banner = () => {
             <img className="h-[350px] xs:h-[450px] md:h-[550px] " src={banner40} alt="/" />
           </div>
 
-          <div className="w-full md:w-[700px] flex justify-center sm:justify-between items-center">
+          <div className="w-full md:w-[700px] flex justify-center sm:justify-between items-center mt-5">
             <img src={banner_img} className="" alt="/" />
           </div>
         </div>

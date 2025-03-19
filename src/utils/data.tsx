@@ -58,7 +58,7 @@ export const scheduleArray = [
     time: "6:00",
     topic: "Leadership Summit ",
     speaker1: "Tonye Cole",
-    speaker2: "Dr Jumoke Oduwole",
+    speaker2: "Dr. Jumoke Oduwole",
     speaker3: "Pastor Yemi Adefarasin",
     speaker4: "Fela Durotoye",
     speaker5: "Pastor Yemi Davids",
@@ -91,7 +91,7 @@ export const scheduleArray = [
     time: "9:30",
     topic: "Charge for the Next 40 Years ",
     speaker1: "Pastor Wale Adefarasin",
-    speaker2: "Nathaniel Bassey ",
+    speaker2: "Pastor Nathaniel Bassey ",
     gmt: "am",
     date: "March 30th",
   },
@@ -100,7 +100,7 @@ export const scheduleArray = [
 export const ministers = [
   {
     name: "WALE & LAOLU ADEFARASIN",
-    profile_name: "PASTOR WALE & LAOLU ADEFARASIN",
+    profile_name: "PASTORS WALE & LAOLU ADEFARASIN",
     title: "Host",
     bio: "Pastor Wale Adefarasin serves as the General Overseer of Guiding Light Assembly (GLA), which recently celebrated its 40th anniversary. With headquarters in Lagos, Nigeria, he provides spiritual leadership to the ministry alongside his wife, Pastor Olaolu Adefarasin, who serves as a pastor within the same assembly. Pastor Olaolu, called to the Nigerian Bar in 1981, practiced briefly with the law firm of Impey & Coker before answering the call to full-time ministry. Led by the Holy Spirit, she established Morning Glory, a women's prayer ministry that meets every Tuesday morning at 7am and has been active for over twenty years. This ministry operates with a mandate to intercede for Nigeria, children, families, ministries, and individual lives. She also leads OASIS, the GLA women's ministry, which organizes colloquiums, retreats, and activities designed to help women address real-life challenges, particularly those unique to women. Her broader influence extends to her roles as Chair on the board of the Interdenominational Pastor's Wife Forum (IPWF) and as a board member of the Woodhall Capital Foundation. Pastor Wale is known for his leadership and is the author of 'The Succession Crisis in Nigeria.' Together, the Adefarasins have built a ministry focused on spiritual growth and community impact. Their family includes three children and two grandchildren, reflecting their commitment to both ministry and family values.",
     img: img16,
@@ -121,7 +121,7 @@ export const ministers = [
   },
   {
     name: "NATHANIEL BASSEY",
-    profile_name: "NATHANIEL BASSEY",
+    profile_name: "PASTOR NATHANIEL BASSEY",
     title: "Ministering",
     bio: "Pastor Nathaniel Bassey is a renowned Gospel Music Minister from Akwa Ibom State, Nigeria, whose multifaceted talents encompass being a recording artist, trumpet player, singer/songwriter, and music producer. He currently serves as the Pastor of THE OASIS, the Youth Church of RCCG, The King's Court in Lagos, Nigeria.Before answering God's call to full-time music ministry, Pastor Nath built a solid musical foundation as bandleader of the Steve Rhodes Jazz Orchestra and as a member of the Spectrum 4 jazz quintet, among other musical collaborations. At the core of his ministry is the belief that music serves as a fundamental tool in the praise and worship of God, creating a divine connection between God and His people. Through his music, he expresses profound love for God while leading countless individuals to Christ through concerts, crusades, church events, and various kingdom gatherings. His ministry extends beyond performance to mentorship, as he regularly speaks at worship and music seminars globally. Pastor Nath is passionate about inspiring the next generation of worship leaders and gospel musicians, emphasizing his concept of a 'TOTAL AND COMPLETE' music minister balanced in SPIRIT, SKILL, and CHARACTER. His prophetic trumpet sound has become his signature, stirring revival and igniting passion for holiness, godliness, and heartfelt worship throughout the body of Christ. Since his debut album 'ELOHIM' recorded in 2008 in Cape Town, South Africa, Pastor Bassey has released multiple influential projects: 'THE SON OF GOD' (2014), 'THIS GOD IS TOO GOOD' (2016), 'REVIVAL FLAMES' (2017), 'JESUS: THE RESURRECTION AND THE LIFE' (2018), 'THE KING IS COMING' (2019), and 'HALLELUJAH AGAIN' (2021). His most recent work, 'THE NAMES OF GOD,' a 15-track album of Prophetic Chants, High Praise, Adoration, Psalms, Hymns, and Spiritual songs recorded live in November 2021, has become a powerful worship resource for believers worldwide. In June 2017, he initiated the 'HALLELUJAH CHALLENGE,' an online praise and prayer gathering that continues to attract thousands of global participants. Pastor Nathaniel Bassey resides in Lagos, Nigeria, with his wife and children.",
     img: img8,
@@ -163,7 +163,7 @@ export const ministers = [
   },
   {
     name: "JUMOKE ODUWOLE",
-    profile_name: "DOCTOR JUMOKE ODUWOLE",
+    profile_name: "DR. JUMOKE ODUWOLE",
     title: "Speaking",
     bio: "Dr. Jumoke Oduwole is a distinguished academic, policy advisor, and advocate currently serving as a Senior Fellow at the Harvard Kennedy School of Government's Mossavar-Rahmani Center for Business and Government. From August 2019 to May 2023, she served as Special Adviser to the President of Nigeria on Ease of Doing Business, following her role as Senior Special Assistant to the President on Industry, Trade & Investment in the Office of the Vice President. Under her leadership, Nigeria achieved a remarkable 39-place improvement in the World Bank's Doing Business Report over a three-year period. Dr. Oduwole is on leave from her position as Senior Lecturer in the Department of Jurisprudence and International Law at the University of Lagos. Her expertise has earned her recognition as a global thought leader, including being the sole African nominee to the World Economic Forum's Global Future Council on Trade and Investment in 2016. Before entering academia, she built a solid career in finance, leading a corporate banking unit within the telecommunications sector at Guaranty Trust Bank Plc and working as an investment banker with FCMB Capital Markets Ltd from 2000 to 2003. Her academic credentials include a law degree from the University of Lagos (1998), an LL.M. in commercial law from Cambridge University as a DFID-Cambridge Commonwealth Trust Scholar (2000), and both a master's in International Legal Studies and a doctorate in International Trade and Development from Stanford Law School. Dr. Oduwole's board service includes positions with Ecobank Nigeria Plc, Positive Action for Treatment Access, and the 'Know Your Constitution' Initiative. She currently serves as a Trustee of the Mandela Institute for Development Studies and is a Tutu Fellow of the African Leadership Institute. She is married to Tunde Oduwole and is the mother of two children.",
     img: img14,
@@ -198,7 +198,7 @@ export const ministers = [
   },
   {
     name: "CHINGTOK ISHAKU",
-    profile_name: "CHINGTOK ISHAKU",
+    profile_name: "PASTOR CHINGTOK ISHAKU",
     title: "Speaking",
     bio: "Apostle Chingtok Ishaku is the Founder and Senior Pastor of The God–Life Assembly International, which has its headquarters in Jos, Plateau State and branches in 6 other cities across Nigeria. He is an astute teacher of the Bible whose infallible passion lies in his desire “to see the body of Christ enter into the fullness of the truth of the Gospel and become accurate witnesses of the full stature of Jesus, as we take the kingdoms of this world and submit them to our God and his Christ”. His deepest desire is to raise men and women who have genuine fellowship with God and represent Him accurately through their obedience in lifestyle, in ministry, in character, in business, in career, in response to the Holy Spirit and in the out-working of His power. He founded the Pathfinders School of Ministry and Pathfinders School of Leadership which aim at raising believers who will dare to walk away from the norm to find their God-ordained paths and modes of operation in ministry and in every other sphere of their lives. Pastor Chingtok has spearheaded projects like Project 7000, an online call to prayer for 7,000 Nigerians; Kingdom Advance; The Whole Truth (Lagos, Jos, Abuja, Port Harcourt, Minna, Abakiliki); Zaria Praise Festival, The God – Life Assembly Annual Camp Meeting, and The New Nation Conference (which is hinged on the “If my People Prayer Tour” by Pastor Chris Delvan, aimed at bringing prophecies about Nigeria to pass). Pastor Chingtok is submitted to the ministry and leadership of Pastor Chris Delvan Gwamna who is the Founder and Senior Pastor of The King of All Kings Church of The Capstone. Together, they have run projects in various parts of Nigeria, whose focus is to exalt Christ and His lordship over Nigeria and all the nations of the earth; and to conform men to the image of Jesus, bringing worship to God in everything they do. Pastor Chingtok is also a deep worshipper and psalmist with seven albums in his library titled: The Worship Expressions Series which contains True of You (2011), The Eternal God (2016), The Living Word (2018), Our God Reigns (2018), Zuciyata (2019), Overflow (2022), and The Bridge (2022). He insists on God’s pattern of building Church into a family according to Scripture as seen in the Acts of the Apostles and believes that everyone God sends to him is his family. He is married to Pastor Sarah Chingtok, and they are blessed with 3 children.",
     img: img12,
@@ -306,3 +306,9 @@ export const linkArray = [
   { url: "CFNbivZ0_jo" },
   { url: "hQq4w7O3ORA" },
 ];
+
+export const headerNav = [
+  {name: 'Schedule'},
+  {name: 'Ministers'},
+  {name: 'Gallery'},
+]
