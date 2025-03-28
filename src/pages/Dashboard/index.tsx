@@ -12,32 +12,47 @@ import LogoutModal from "../../components/LogoutModal";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const User_id = localStorage.getItem("glais40EmailAdmin");
   const [showLoggoutModal, setShowLoggoutModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState(dashboardNav[0].name);
 
-  const [selectedDisplayPicture, setSelectedDisplayPicture] = useState<File[]>(
+  const [selectedDisplayPictures, setSelectedDisplayPictures] = useState<
+    File[]
+  >([]);
+  const [previewDisplayImages, setPreviewDisplayImages] = useState<string[]>(
     []
   );
-  const [previewDisplayImage, setPreviewDisplayImage] = useState<string | null>(
-    null
-  );
-  const [selectedDisplay, setSelectedDisplay] = useState("");
 
   const handleChangeDisplayPic = (e: any) => {
-    setSelectedDisplay(e.target.files[0]);
+    const newFiles: File[] = Array.from(e.target.files);
 
-    const newImages = e.target.files || [];
-    setSelectedDisplayPicture([...selectedDisplayPicture, ...newImages]);
+    setSelectedDisplayPictures((prevFiles) => [...prevFiles, ...newFiles]);
 
-    if (newImages.length > 0 && previewDisplayImage === null) {
+    const newPreviews: string[] = [];
+    newFiles.forEach((file) => {
       const reader = new FileReader();
-      reader.onload = (e) =>
-        setPreviewDisplayImage((e.target as any).result as string);
-      reader.readAsDataURL(newImages[0]);
-    }
+      reader.onload = (event) => {
+        newPreviews.push(event.target?.result as string);
+        if (newPreviews.length === newFiles.length) {
+          setPreviewDisplayImages((prevPreviews) => [
+            ...prevPreviews,
+            ...newPreviews,
+          ]);
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const removeImage = (indexToRemove: number) => {
+    setSelectedDisplayPictures((prevFiles) =>
+      prevFiles.filter((_, index) => index !== indexToRemove)
+    );
+    setPreviewDisplayImages((prevPreviews) =>
+      prevPreviews.filter((_, index) => index !== indexToRemove)
+    );
   };
 
   const [parentList, setParentList] = useState([] as any);
@@ -61,35 +76,39 @@ const Dashboard = () => {
 
     const category = selectedOptions.value;
 
-    const formData = new FormData();
-    formData.append("category", category);
-    formData.append("image", selectedDisplay);
-    formData.append("content", content);
-
     try {
-      const res = await AxiosInstance.post(`/post/createPost`, formData).then(
-        (response) => {
-          if (response.status === 200) {
-            toast.success(`new post created`);
-          }
+      const postPromises = selectedDisplayPictures.map(async (file) => {
+        const formData = new FormData();
+        formData.append("category", category);
+        formData.append("image", file);
+        formData.append("content", content);
 
-          setContent("");
-          setSelectedDisplay("");
-
-          setPreviewDisplayImage(null);
-          setSelectedOptions([]);
-          setIsLoading(false);
+        const response = await AxiosInstance.post(`/post/createPost`, formData);
+        if (response.status === 200) {
+          return response;
+        } else {
+          throw new Error(`Failed to create post for ${file.name}`);
         }
-      );
+      });
+
+      const results = await Promise.all(postPromises);
+
+      toast.success(`new post(s) created`);
+
+      setContent("");
+      setSelectedDisplayPictures([]);
+      setPreviewDisplayImages([]);
+      setSelectedOptions([]);
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
+      toast.error("Failed to create all posts");
+      setIsLoading(false);
     }
   };
 
   const validate =
-    // !title ||
-    // !price ||
-    !content || selectedDisplay.length === 0 || selectedOptions.length === 0;
+    selectedDisplayPictures.length === 0 || selectedOptions.length === 0;
 
   return (
     <>
@@ -141,31 +160,41 @@ const Dashboard = () => {
               </div>
 
               <div className="flex flex-col gap-2 w-full md:w-[80%]">
-                <p className="text-[14px] font-semibold">Image</p>
+                <p className="text-[14px] font-semibold">Images</p>
                 <div className="shadow shadow-[#bfbfc3] h-[230px] border-y-[#ac5a5a74] border-y bg-white rounded-md flex justify-center items-center">
-                  {previewDisplayImage ? (
-                    <img
-                      src={previewDisplayImage}
-                      alt="Selected Icon"
-                      className="w-full h-full object-cover rounded-md"
-                    />
-                  ) : (
-                    <>
-                      <label>
-                        <p className="flex justify-center items-center text-[38px] cursor-pointer font-black bg-[#bfbfc3] shadow text-white w-[60px] h-[60px] rounded-[30px]">
-                          +
-                        </p>
-                        <input
-                          name="displayImage"
-                          id="displayImage"
-                          type="file"
-                          accept="image/*"
-                          onChange={handleChangeDisplayPic}
-                          className="hidden"
+                  <div className="flex overflow-x-auto">
+                    {previewDisplayImages.map((image, index) => (
+                      <div key={index} className="relative mx-2">
+                        <img
+                          src={image}
+                          alt={`Selected Icon ${index}`}
+                          className="h-[200px] w-[200px] object-cover rounded-md"
                         />
-                      </label>
-                    </>
-                  )}
+                        <div className="absolute top-[-10px] right-[-8px]">
+                          <div
+                            className="h-5 w-5 bg-red-700 text-white rounded-[30px] text-[12px] krona-one flex justify-center items-center cursor-pointer"
+                            onClick={() => removeImage(index)}
+                          >
+                            X
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    <label className="mx-2">
+                      <p className="flex justify-center items-center text-[38px] cursor-pointer font-black bg-[#bfbfc3] shadow text-white w-[60px] h-[60px] rounded-[30px]">
+                        +
+                      </p>
+                      <input
+                        name="displayImages"
+                        id="displayImages"
+                        type="file"
+                        accept="image/*"
+                        onChange={handleChangeDisplayPic}
+                        className="hidden"
+                        multiple // Allow multiple file selection
+                      />
+                    </label>
+                  </div>
                 </div>
               </div>
 
@@ -216,7 +245,12 @@ const Dashboard = () => {
             <img src={logo} className="h-[220px] w-[220px]" alt="/" />
           </div>
           <p className="krona-one">Kindly log in</p>
-          <button onClick={() => navigate('/Admin-Signup')} className="rounded-[5px] h-[39px] w-[170px] border border-blue-300 shadow text-[17px] ">Login</button>
+          <button
+            onClick={() => navigate("/Admin-Signup")}
+            className="rounded-[5px] h-[39px] w-[170px] border border-blue-300 shadow text-[17px] "
+          >
+            Login
+          </button>
         </div>
       )}
     </>

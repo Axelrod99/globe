@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   HomeClick,
 }) => {
   const [isSticky, setIsSticky] = useState(false);
-  const [showOptions, setShowOptions] = useState(true);
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

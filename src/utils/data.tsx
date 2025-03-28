@@ -79,7 +79,7 @@ export const scheduleArray = [
   },
   {
     time: "12:00",
-    topic: "Fanning the Flames ",
+    topic: "Fanning the Flame",
     speaker1: "Pastor Paul Adefarasin",
     speaker2: "Pastor Ibukun Awosika",
     speaker3: "Pastor Chingtok Ishaku",
@@ -88,7 +88,7 @@ export const scheduleArray = [
     date: "March 29th",
   },
   {
-    time: "9:30",
+    time: "10",
     topic: "Charge for the Next 40 Years ",
     speaker1: "Pastor Wale Adefarasin",
     speaker2: "Pastor Nathaniel Bassey ",
@@ -115,7 +115,7 @@ export const ministers = [
   {
     name: "YEMI ADEFARASIN",
     profile_name: "PASTOR YEMI ADEFARASIN",
-    title: "Speaking",
+    title: "Speaker",
     bio: "Michael Adeyemi Adefarasin, widely known as Apostle Yemi, is a prominent apostolic voice to the nations and serves as the chief servant of Kingdom Lifeline Apostolic Ministries International. His ministry is defined by a divine mandate for church reformation, with a specific call to raise leaders who will influence society, bringing positive change and transformation to advance God's kingdom. His mission centers on empowering believers to influence world cultures and shift paradigms from secular to kingdom perspectives, guided by scriptural foundations in Matthew 28:19-20 and Revelation 11:15. This work is characterized by three core goals: empowerment, influence, and reformation. Apostle Yemi's ministry focuses on teaching the Word, fostering true worship, and facilitating prayer for complete edification of spirit, soul, and body. Drawing his mandate from Isaiah 42:6-7, he delivers his core message on the Ekklesia with profound insight. As an international conference speaker, he is renowned for his ability to teach the depths of God's Word with clarity and power. He carries a distinctive apostolic grace and prophetic mantle that manifests in open heavens and the dismantling of territorial strongholds, particularly through deliverance ministry. His international experience includes 14 years in the Republic of Benin (formerly Dahomey), where he pioneered the charismatic movement of God in that nation. A significant expression of his ministry is raising kingdom sons unto God, leading him to provide apostolic oversight to numerous ministries worldwide. His deepest passion remains the salvation of souls and the empowerment of disciples to fulfill their redemptive purpose. Apostle Yemi is married to Sharon, who partners with him in ministry.",
     img: img7,
   },
@@ -129,7 +129,7 @@ export const ministers = [
   {
     name: "YEMI DAVIDS",
     profile_name: "PASTOR YEMI DAVIDS",
-    title: "Speaking",
+    title: "Panelist",
     bio: 'Yemi Davids is an anointed teacher, public speaker, bestselling author, and radio host guided by the philosophy that humans are not created as finalities but as possibilities. With a divine mandate to teach and impart principles of greatness, he has dedicated his life to helping individuals and organizations express their inherent potential. His radio broadcast, "Achieve Greatness with Yemi Davids," reaches audiences across numerous Nigerian cities, covering essential topics including business, family, career, finance, and relationships. Through strategic developmental training programs, he empowers diverse clients to unlock their greatness. With over a decade of expertise in leadership and organizational growth, Davids works with an extensive range of clients—from inner-city communities to corporate organizations, religious institutions, and government bodies. As Senior Pastor of Global Impact Church, he leads a wisdom-based congregation committed to helping people achieve greatness and create meaningful impact on society. Davids founded the Living Word Fellowship Nigeria, a dynamic campus ministry network that originated at Obafemi Awolowo University in Ile-Ife. His literary contributions include various books addressing vital life areas, and he hosts the monthly Ministers & Leaders Forum to develop spiritual leadership. He resides in Lagos, Nigeria, with his wife and children, continuing his mission to transform lives through practical wisdom and spiritual guidance.',
     img: img4,
   },
@@ -150,7 +150,7 @@ export const ministers = [
   {
     name: "TOYOSI ETIM-EFFIONG",
     profile_name: "TOYOSI ETIM-EFFIONG",
-    title: "Speaking",
+    title: "Panelist",
     bio: "Toyosi Etim-Effiong stands as a visionary media entrepreneur who has become an influential force in Nigeria's entertainment landscape. With over eight years of dynamic industry experience, she has established herself as a pioneer bridging the gap between Nollywood and global film industries, particularly Hollywood. Her academic foundation combines economics and creative pursuits: a BSc in Economics from Bowen University, an MSc in Economic Development and Policy Analysis from the University of Nottingham, complemented by specialized diplomas in Broadcast Journalism and Producing from the New York Film Academy. As founder of That Good Media, a leading talent agency and media conglomerate, Toyosi has created essential industry infrastructure within Nigeria's film and television sector. Her company negotiates opportunities that ensure Nigerian talent receives equitable recognition and compensation in the global entertainment market, generating millions of naira for the talents she represents while expanding their earning potential internationally. Toyosi's impact extends beyond her business ventures. In 2019, she joined the board of the Green Girl Company, contributing to initiatives empowering young women through the Raising Girls Summit and Miss Nigeria pageant. That same year, as an FCMB 'SheVentures Mentor,' she guided aspiring women entrepreneurs to measurable success. Currently serving on the board of Mwankom, parent company of Rolling Stone Africa, Toyosi plays a crucial role in amplifying African voices within global entertainment. This strategic position leverages Rolling Stone's international reputation to elevate African stories and talent to deserved recognition. Her three-year partnership with the Essence Film Festival has showcased premier Nollywood talent, enhancing global recognition and creating new opportunities for Nigerian filmmakers and actors. These efforts have significantly increased international visibility for Nollywood productions, fostering both cultural exchange and economic growth across Africa's entertainment sector. Throughout her career, Toyosi has remained committed to transforming African cinema's global narrative while creating financially beneficial opportunities for industry stakeholders. Her journey exemplifies resilience, innovation, and unwavering dedication to advancing African entertainment on the world stage.",
     img: img3,
   },
@@ -164,21 +164,21 @@ export const ministers = [
   {
     name: "JUMOKE ODUWOLE",
     profile_name: "DR. JUMOKE ODUWOLE",
-    title: "Speaking",
+    title: "Speaker",
     bio: "Dr. Jumoke Oduwole is a distinguished academic, policy advisor, and advocate currently serving as a Senior Fellow at the Harvard Kennedy School of Government's Mossavar-Rahmani Center for Business and Government. From August 2019 to May 2023, she served as Special Adviser to the President of Nigeria on Ease of Doing Business, following her role as Senior Special Assistant to the President on Industry, Trade & Investment in the Office of the Vice President. Under her leadership, Nigeria achieved a remarkable 39-place improvement in the World Bank's Doing Business Report over a three-year period. Dr. Oduwole is on leave from her position as Senior Lecturer in the Department of Jurisprudence and International Law at the University of Lagos. Her expertise has earned her recognition as a global thought leader, including being the sole African nominee to the World Economic Forum's Global Future Council on Trade and Investment in 2016. Before entering academia, she built a solid career in finance, leading a corporate banking unit within the telecommunications sector at Guaranty Trust Bank Plc and working as an investment banker with FCMB Capital Markets Ltd from 2000 to 2003. Her academic credentials include a law degree from the University of Lagos (1998), an LL.M. in commercial law from Cambridge University as a DFID-Cambridge Commonwealth Trust Scholar (2000), and both a master's in International Legal Studies and a doctorate in International Trade and Development from Stanford Law School. Dr. Oduwole's board service includes positions with Ecobank Nigeria Plc, Positive Action for Treatment Access, and the 'Know Your Constitution' Initiative. She currently serves as a Trustee of the Mandela Institute for Development Studies and is a Tutu Fellow of the African Leadership Institute. She is married to Tunde Oduwole and is the mother of two children.",
     img: img14,
   },
   {
     name: "FELA DUROTOYE",
     profile_name: "FELA DUROTOYE",
-    title: "Speaking",
+    title: "Panelist",
     bio: "Born May 12, 1971, in Ibadan, Nigeria, Oluwafeolami 'Fela' Durotoye grew up in the university town of Ile-Ife where his educational journey began. After attending Staff Children's School (1974-1981) and Moremi High School (1981-1986), he earned both his Bachelor's degree in Computer Science with Economics and MBA from Obafemi Awolowo University (formerly University of Ife). His academic credentials include executive education from Harvard Kennedy School, Yale University, and The Leadership Institute. Durotoye is a certified John Maxwell Team leadership coach and completed specialized programs at Lagos Business School and the Nigerian Police Training School, where he received the Distinguished Student Award. Known professionally as 'FD,' he lectures on Ethical Leadership at Stanford University's SEED Program for CEOs operating across Africa. His MBA research on 'The Management of Change in Complex Organizations' has informed his consultancy work across various industries including financial services, oil and gas, telecommunications, and manufacturing. Fela is married to Tara Durotoye, the renowned beauty entrepreneur and CEO of House of Tara International. Together they have three sons: Mobolurin, Oluwademilade, and Morolaoluwa. With over 1 million followers across social media platforms, Durotoye has emerged as a respected voice for leadership and national development in Nigeria, connecting with audiences of all ages and backgrounds.",
     img: img15,
   },
   {
     name: "UCHE PEDRO",
     profile_name: "UCHE PEDRO",
-    title: "Speaking",
+    title: "Panelist",
     bio: "Uche Pedro is a visionary Nigerian entrepreneur who has transformed Africa's digital media landscape as the founder and CEO of BellaNaija, a leading media tech brand renowned for its entertainment and lifestyle content. Under her strategic leadership, BellaNaija has achieved unprecedented growth across its portfolio of brands—BellaNaija.com, BellaNaija Weddings, and BellaNaija Style—establishing the largest social media footprint on the African continent with over 200 million monthly impressions. Her innovative approach to digital media earned her the prestigious Forbes Woman Africa New Media Award in March 2019, recognizing her significant contributions to media innovation across Africa. Pedro's academic foundation includes a Bachelor's degree in Honours Business Administration (HBA) from the Ivey Business School at Western University in Canada, where she graduated with distinction. This educational background has informed her business acumen and strategic vision. Beyond her entrepreneurial success, Pedro maintains a deep commitment to youth development throughout Nigeria and across the African continent, channeling her influence toward creating opportunities and fostering progress for the next generation of African leaders and innovators.",
     img: img2,
   },
@@ -192,21 +192,21 @@ export const ministers = [
   {
     name: "IBUKUN AWOSIKA",
     profile_name: "PASTOR IBUKUN AWOSIKA",
-    title: "Speaking",
+    title: "Speaker",
     bio: "Ibukun Awosika is a pioneering African entrepreneur, author, international leader, and global culture shaper whose influence spans business, governance, and social impact. As founder of The Chair Centre Group, she has built one of Nigeria's premier furniture and security systems providers. Her entrepreneurial vision extends to the Ibukun Awosika Leadership Academy and the International Woman Leadership Conference in Dubai. Through her Christian Missionary Fund, she drives faith-based initiatives transforming lives across Nigeria. Her academic foundation combines a Chemistry degree from the University of Ife with advanced studies at prestigious global institutions including Lagos Business School, IESE Business School, Wharton, and China European International Business School (CEIBS). Awosika's governance expertise is sought worldwide, evidenced by her board positions across diverse sectors including education, energy, IT, manufacturing, retail, financial services, corporate governance, and advocacy. Her trailblazing career includes numerous historic achievements: serving as the first female Chairperson of First Bank of Nigeria, pioneering as Chairperson of the Nigerian National Advisory Board for Impact Investing, becoming the first Nigerian recipient of the International Women Entrepreneurial Challenge Award, and the first African honored with Spain's International Friendship Award (2019). Her commitment to national development is reflected in appointments to the UK G7 Impact Taskforce and the Nigerian Economic Summit Group, and her service on the inaugural board of the Nigerian Sovereign Wealth Fund. Recent accolades include the 2020 Forbes Woman Africa Chairperson Award and the Beta Gamma Sigma 2020 Business Achievement Award. She is a fellow of the African Leadership Initiative and Aspen Global Leadership Network, and holds four Honorary Doctorate Degrees. Ibukun is married to Abiodun Awosika, and they have three sons.",
     img: img11,
   },
   {
     name: "CHINGTOK ISHAKU",
     profile_name: "PASTOR CHINGTOK ISHAKU",
-    title: "Speaking",
+    title: "Speaker",
     bio: "Apostle Chingtok Ishaku is the Founder and Senior Pastor of The God–Life Assembly International, which has its headquarters in Jos, Plateau State and branches in 6 other cities across Nigeria. He is an astute teacher of the Bible whose infallible passion lies in his desire “to see the body of Christ enter into the fullness of the truth of the Gospel and become accurate witnesses of the full stature of Jesus, as we take the kingdoms of this world and submit them to our God and his Christ”. His deepest desire is to raise men and women who have genuine fellowship with God and represent Him accurately through their obedience in lifestyle, in ministry, in character, in business, in career, in response to the Holy Spirit and in the out-working of His power. He founded the Pathfinders School of Ministry and Pathfinders School of Leadership which aim at raising believers who will dare to walk away from the norm to find their God-ordained paths and modes of operation in ministry and in every other sphere of their lives. Pastor Chingtok has spearheaded projects like Project 7000, an online call to prayer for 7,000 Nigerians; Kingdom Advance; The Whole Truth (Lagos, Jos, Abuja, Port Harcourt, Minna, Abakiliki); Zaria Praise Festival, The God – Life Assembly Annual Camp Meeting, and The New Nation Conference (which is hinged on the “If my People Prayer Tour” by Pastor Chris Delvan, aimed at bringing prophecies about Nigeria to pass). Pastor Chingtok is submitted to the ministry and leadership of Pastor Chris Delvan Gwamna who is the Founder and Senior Pastor of The King of All Kings Church of The Capstone. Together, they have run projects in various parts of Nigeria, whose focus is to exalt Christ and His lordship over Nigeria and all the nations of the earth; and to conform men to the image of Jesus, bringing worship to God in everything they do. Pastor Chingtok is also a deep worshipper and psalmist with seven albums in his library titled: The Worship Expressions Series which contains True of You (2011), The Eternal God (2016), The Living Word (2018), Our God Reigns (2018), Zuciyata (2019), Overflow (2022), and The Bridge (2022). He insists on God’s pattern of building Church into a family according to Scripture as seen in the Acts of the Apostles and believes that everyone God sends to him is his family. He is married to Pastor Sarah Chingtok, and they are blessed with 3 children.",
     img: img12,
   },
   {
     name: "PAUL ADEFARASIN",
     profile_name: "PASTOR PAUL ADEFARASIN",
-    title: "Speaking",
+    title: "Speaker",
     bio: "Paul Adefarasin is a Christian Minister, Thought-Leader, Author, Coach, Philanthropist, Motivator, and Speaker. He is the Host of ‘Something Is About To Happen’ which, 20 years from inception, still airs in millions of homes across Africa and Europe. As the convener of “The Experience” - the largest musical event in Africa, and Founder and Metropolitan Senior Pastor of the House On The Rock, a multiracial, and multifaceted Church with several Churches and ministries across Africa and Europe, Paul’s work spans a good part of the globe. Paul married Ifeanyi twenty-seven years ago and they have three children - Hilda, Alvin, and Alexander. With over three decades of pastoral and visionary leadership, this Architect turned Minister, mentors CEOs, and entrepreneurs in Nigeria and the diaspora. Paul purposefully works to influence public policy in his home country, working assiduously as a voice of conscience, a citizen’s advocate, and a bridge builder facilitating the exchange of ideas with critical stakeholders within and without Nigeria. Paul is also the Founder and President of The Rock Foundation, a charity that undertakes significant social responsibility initiatives, empowering recipients in sectors as diverse as education, healthcare, prison welfare, and policy reform. The recipient of several awards including the Nigerian Red Cross Society Humanitarian Excellence Award; Lagos State Government Corporate Social Responsibility Award for technology and infrastructural intervention in Lagos State Schools; Forbes Best of Africa Most Influential Personality Of The Year 2021 Award; Forbes Best of Africa Leadership Award 2023, Transformation Award by the United Chaplains State of New York; and the United Nations-backed Most Influential People of African Descent Award. Paul Adefarasin’s love for God, country, family, and people is the hallmark of all his undertakings.",
     img: img5,
   },
@@ -220,7 +220,7 @@ export const ministers = [
   {
     name: "TONYE COLE",
     profile_name: "TONYE COLE",
-    title: "Speaking",
+    title: "Speaker",
     bio: "TONYE PATRICK COLE, mni, an alumni of University of Lagos, Harvard Business School and Oxford University, is the co-founder and former Group Executive Director of Sahara Group, an energy conglomerate with operations spanning the entire energy chain in Nigeria and neighbouring West African countries to East Africa and beyond. The Group operates in 38 countries around the world with over 4,000 employees and an annual turnover of $11 billion. In addition to founding and running one of Nigeria’s largest energy conglomerates, Mr Cole also spearheaded and developed work carried out by the Sahara Foundation globally. He continues working to inspire the youth of Africa through charities such as his NGO, Nehemiah Youth Empowerment initiative, The REACH (a charity that feeds the indigent), Cole’s Tech Yard (an Innovation Hub) and the Behavioural Health Institute (BHI) he set up for the study and management of behavioural health issues especially amongst the youths in Nigeria. Mr Cole works closely with a number of foundations in Nigeria including the Down Syndrome Foundation, Slum-2- School Foundation, The Compassionate Center and various orphanages. He is chairman of Enactus Nigeria. In December 2019, The New African named Mr. Cole amongst the top 100 most influential Africans alive. He is a two time gubernatorial candidate for Rivers State in the 2018 and 2023 elections. He is a motivational speaker, writer, teacher and mentor. He is married to Dr Sylvia Cole and they have three adult children.",
     img: img9,
   },
