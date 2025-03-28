@@ -76,24 +76,28 @@ const CommentPopup: FC<CommentProps> = ({ parentItem, handleBack }) => {
       <div className="flex flex-col w-full border-r">
         <img src={parentItem?.image} className="h-full w-full" alt="/" />
 
-        <div className="px-2 border-t border-t-[#acacac] w-full md:hidden flex gap-1 py-7">
-          <input
-            className="h-[43px] w-full border-b-2"
-            placeholder="Add a comment here..."
-            type="text"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          />
-          <div className="w-[47px] flex justify-center">
-            <button
-              disabled={!comment}
-              onClick={handleSend}
-              className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
-            >
-              {loading ? "..." : <img src={send} alt="/" />}
-            </button>
+        {emailss !== null ? (
+          <div className="px-2 border-t border-t-[#acacac] w-full md:hidden flex gap-1 py-7">
+            <input
+              className="h-[43px] w-full border-b-2"
+              placeholder="Add a comment here..."
+              type="text"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            />
+            <div className="w-[47px] flex justify-center">
+              <button
+                disabled={!comment}
+                onClick={handleSend}
+                className="h-[43px] w-[43px] bg-gray-100 border border-gray-300 shadow rounded-[50px] flex justify-center items-center"
+              >
+                {loading ? "..." : <img src={send} alt="/" />}
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="h-full flex flex-col w-full border-l relative">
         <div className="md:border-b border-b-[#acacac] w-full h-fit p-2 text-[13px] md:text-[15px] mb-1 md:mb-0">
